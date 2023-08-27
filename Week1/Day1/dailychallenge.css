@@ -1,0 +1,25 @@
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+}
+
+.logo {
+    background-image: url("av.jpg");
+    width: 60px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    background-image: url("avengers.jpg");
+    background-repeat: no-repeat;
+    background-size: 1300px 600px;
+}
+
+.name {
+    margin-top: 290px; 
+}
+
