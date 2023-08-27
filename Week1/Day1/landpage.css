@@ -1,0 +1,144 @@
+* {
+    box-shadow: none !important;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#start {
+    color: black;
+    margin-left: 70px;
+}
+
+.button {
+    background-color: #7CB9E8;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: white;
+    display: inline-block;
+    height: 40px;
+    line-height: 20px;
+    margin: 0;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+}
+
+
+.boxmodel {
+    /* border: 5px solid red; */
+    padding: 140px;
+    text-align: center;
+    background-image: url(sea.jpg);
+    background-size: 100%;
+    color: white;
+}
+
+.boxmodel2 {
+    /* border: 5px solid red; */
+    background-image: url(sea.jpg);
+    width: auto;
+    height: 400px;
+    position: relative;
+    background-size: 1500px 400px;
+}
+
+.boxmodel3 {
+    /* border: 5px solid red; */
+    width: 900px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 200px;
+    /*position:absolute;*/
+    bottom: 0px;
+}
+
+.boxmodel4 {
+    /* border: 5px solid red; */
+    width: 800px;
+    height: 120px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    bottom: 0px;
+    color: gray;
+    font-size: x-large;
+    text-align: center;
+}
+
+.boxmodel5 {
+    /* border: 5px solid red; */
+    width: 800px;
+    height: 80px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    margin-left: -5px;
+    bottom: 0px
+}
+
+form {
+    background: white;
+    display: flex;
+    width: 650px;
+}
+
+form input {
+    border: 0;
+    outline: none;
+    height: 70px;
+}
+
+form button {
+    outline: none;
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: 80%;
+    color: white;
+    background-color: blue;
+    border: none;
+}
+
+.boxmodel6 {
+    /* border: 5px solid red; */
+    width: auto;
+    height: 200px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: -5px;
+    background-color: lightgray;
+}
+
+.boxmodel7 {
+    /* border: 5px solid red; */
+    display: inline-block;
+    width: 190px;
+    height: 190px;
+    margin-left: 190px;
+    /*    padding-left: 1px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 240px;
+    margin-top: 45px; */
+}
+
+.boxmodel7 h5 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.boxmodel7 p {
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
