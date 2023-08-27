@@ -1,4 +1,18 @@
+a {
+    text-decoration: none;
+}
 #example {
     text-decoration: underline;
-    font-style: italic
+    font-style: italic;
+    border-style: solid;
+    border-color: green;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #bdcebe;
 }

@@ -1,0 +1,24 @@
+#secli {
+    color: blue;
+}
+
+#start {
+    text-transform: uppercase;
+}
+
+#firstp {
+    background-color: pink;
+    color: white;
+}
+
+#secondp {
+    background-color: lightblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 5px;
+}
