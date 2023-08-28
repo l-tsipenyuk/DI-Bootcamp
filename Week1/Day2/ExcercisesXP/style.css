@@ -1,0 +1,10 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+}
+

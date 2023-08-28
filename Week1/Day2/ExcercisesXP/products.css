@@ -1,0 +1,77 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+}
+
+.parent {
+    border: 5px solid white;
+    height: 50%;
+    position: relative;
+    display: flex;
+}
+
+.child {
+    width: 25%;
+    height: 70%;
+    /* border: 5px solid goldenrod; */
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    max-height: 20%;
+    margin-bottom: 200px;
+}
+
+.header {
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    /* border: 5px solid red; */
+    position: absolute;
+    bottom: 0;
+}
+
+.price {
+    color: turquoise;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.oldprice {
+    color: lightgray;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: line-through;
+}
+
+
+.add {
+    position: absolute;
+}
+
+.button {
+    background-color: white;
+    border-radius: 8px;
+    border-style: none;
+    border: 0.5px solid gray;
+    box-sizing: border-box;
+    color: gray;
+    display: inline-block;
+    cursor: pointer;
+    height: 40px;
+    line-height: 25px;
+    margin-left: -70px;
+    padding: 10px 16px;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+}

@@ -29,17 +29,21 @@ body {
 
 
 .boxmodel {
-    /* border: 5px solid red; */
+    border: 5px solid red;
     padding: 140px;
     text-align: center;
     background-image: url(sea.jpg);
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
     background-size: 100%;
     color: white;
 }
 
 .boxmodel2 {
-    /* border: 5px solid red; */
+    border: 5px solid red;
     background-image: url(sea.jpg);
+    height: 80%;
     width: auto;
     height: 400px;
     position: relative;

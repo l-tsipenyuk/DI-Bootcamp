@@ -1,0 +1,48 @@
+body {
+    background-color: lightblue;
+}
+
+#parent {
+    height: 200px;
+    border: 5px solid red;
+    position: relative;
+    overflow-y: scroll; /*if there's too much text - it will add scroll */
+    overflow-x: hidden;
+}
+
+#child {
+    width: 100px;
+    height: 100px;
+    border: 5px solid yellow;
+
+    /*position relative - it allows to use top,
+        bottom,
+        left etc.
+    position: relative; 
+    top: 5px;
+    left: 100px; */
+
+    /*position fixed - good for navbars 
+    position: fixed; */
+
+    /*position sticky - helps the cards to go from right to left 
+    position: sticky;
+    top: 10px; */
+
+    /*position absolute - now it will stick to the bottom if the parent div has position relative. good choice for the footer */
+    position:absolute;
+    bottom: 0; 
+
+}
+
+#child:hover {
+    background-color: purple;
+}
+
+p:first-child {
+    background-color: red;
+}
+
+div:not(.no-red) {
+    background-color: lightcoral;
+}
