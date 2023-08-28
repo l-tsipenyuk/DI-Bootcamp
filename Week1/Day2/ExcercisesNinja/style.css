@@ -1,0 +1,39 @@
+.parent {
+    display: flex;
+}
+
+.login {
+    border: 5px solid black;
+    height: 50%;
+    width: 50%;
+    position: relative;
+    text-align: center;
+}
+
+.hello {
+    border: 5px solid black;
+    height: 50%;
+    width: 50%;
+    position: relative;
+}
+
+
+.email {
+    background-color: lightgray;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.password {
+    background-color: lightgray;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    display: inline-block;
+    width: auto;
+}
