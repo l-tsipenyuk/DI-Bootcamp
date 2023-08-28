@@ -2,12 +2,16 @@
     display: flex;
 }
 
-.login {
+.child {
     border: 5px solid black;
     height: 50%;
     width: 50%;
     position: relative;
     text-align: center;
+}
+
+.login {
+    border: 5px solid blue;
 }
 
 .hello {
@@ -36,4 +40,73 @@ input[type="checkbox"] {
     appearance: checkbox;
     display: inline-block;
     width: auto;
+}
+
+.checkbox {
+    border: solid 5px gold;
+    display: block;
+    /* position: relative; */
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    text-align: right;
+    display: flex;
+}
+
+.container {
+color: black;
+text-align: left;
+position: relative;
+left: -10%;
+border: solid 5px blueviolet;
+margin-bottom: 5%;
+}
+
+.checkbox span {
+    font-size: 12px;
+    text-align: left;
+}
+
+.child button {
+    background-color: purple;
+    border: none;
+    color: white;
+    padding: 5px 90px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.fancy {
+    line-height: 0.5;
+    text-align: center;
+}
+
+.fancy span {
+    display: inline-block;
+    position: relative;
+}
+
+.fancy span:before,
+.fancy span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid gray;
+    top: 0;
+    width: 600px;
+}
+
+.fancy span:before {
+    right: 100%;
+    margin-right: 5px;
+    width: 100%;
+}
+
+.fancy span:after {
+    left: 100%;
+    margin-left: 5px;
+    width: 100%;
 }

@@ -13,17 +13,26 @@
 
 <body>
     <div class="parent">
-        <div class="login">
-            <h1>Log In</h1>
-            <p class="email">
-                <input type="email" name="email" placeholder="e-mail" placeholder="Email" />
-            </p>
-            <p class="password">
-                <input type="password" name="pass" placeholder="password" />
-            </p>
-            <p class="checkbox">
-           <input type="checkbox">Remember me
-            </p>
+        <div class="child">
+            <div class="login">
+                <h1>Log In</h1>
+                <p class="email">
+                    <input type="email" name="email" placeholder="e-mail" placeholder="Email" />
+                </p>
+                <p class="password">
+                    <input type="password" name="pass" placeholder="password" />
+                </p>
+            </div>
+            <div class="checkbox">
+                <label class="container">Remember me
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <span>Forgot password?</span>
+            </div>
+            <button type="button">LOG IN</button>
+            <div class="fancy"><span>Or connect with</span></div>
+
         </div>
         <div class="hello">
             <p>dfd</p>
