@@ -4,6 +4,11 @@
     background-color: #eee;
 }
 
+
+.navbar {
+    background-color: black;
+}
+
 .logo {
     background-image: url("av.jpg");
     width: 60px;
@@ -20,6 +25,84 @@ body {
 }
 
 .name {
-    margin-top: 290px; 
+    margin-top: 290px;
 }
 
+.name h1 {
+    font-size: 100px;
+}
+
+/*header*/
+
+@media screen and (min-width: 480px) {
+    .name h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .name h1 {
+        font-size: 35px;
+    }
+}
+
+
+
+
+/*navbar*/
+@media screen and (max-width: 480px) {
+    .navbar {
+        background-color: yellow;
+
+    }
+
+    .right a {
+        color: black;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .navbar {
+        background-color: lightgreen;
+
+    }
+
+    .right a {
+        color: black;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        background-color: red;
+
+    }
+
+    .right a {
+        color: white;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+        background-color: black;
+
+    }
+
+    .right a {
+        color: white;
+    }
+}
+
+/*text position*/
+@media screen and (min-width: 768px) {
+    .name b {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .name b {
+        float: none;
+    }
+}
