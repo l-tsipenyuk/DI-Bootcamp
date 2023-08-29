@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .flex-container {
+            padding: 0;
+            margin: 0;
+            height: 300px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        .row {
+            flex-direction: row;
+        }
+
+        .flex-item {
+            padding: 5px;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container column">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
+        <div class="flex-item">D</div>
+    </div>
+
+    <div class="flex-container column-reverse">
+        <div class="flex-item">E</div>
+        <div class="flex-item">F</div>
+        <div class="flex-item">G</div>
+        <div class="flex-item">H</div>
+    </div>
+
+    <div class="flex-container row">
+        <div class="flex-item">I</div>
+        <div class="flex-item">J</div>
+        <div class="flex-item">K</div>
+        <div class="flex-item">L</div>
+    </div>
+</body>
+
+</html>
