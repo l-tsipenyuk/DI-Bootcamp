@@ -1,0 +1,154 @@
+body {
+    background-image: url("worldmap.png");
+    background-color: rgba(255, 255, 255, 0.993);
+    background-blend-mode: darken;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    /* grid-template-areas:
+        "header header header"
+        "business users sold"
+        "Tina Corrine Chris" */
+    grid-template-rows: 30% 5% 30% 15% 15% 15% 10% 10% 10%;
+    /* gap: 20px; */
+    /* padding: 50px; */
+    height: 600px;
+    /* align-items: center; */
+
+}
+
+.header {
+    /* grid-area: header; */
+    grid-column: 1/span 3;
+}
+
+.header p {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 60px;
+}
+
+.numbers {
+    /* grid-area: business; */
+    grid-row: 2;
+}
+
+.numbers h3 {
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(55, 54, 158);
+    /* margin-top: 10px; */
+    margin-bottom: 0;
+}
+
+.numbers p {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+/* 
+.users {
+    /* grid-area: users; */
+/* grid-column: 2;
+} */
+
+/* .users h3 {
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(55, 54, 158);
+    margin-top: 10px;
+    margin-bottom: 0;
+} */
+
+/* .users p {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    margin: 0;
+} */
+
+/* .sold {
+    /* grid-area: sold; */
+/* grid-column: 3;
+} */
+
+/* .sold h3 {
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(55, 54, 158);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.sold p {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    margin: 0;
+} */
+
+.card {
+    /* grid-area: Tina; */
+    grid-column: 1;
+    grid-row: 3/span 6; /*change 4 for other cards*/
+    width: 60%;
+    /* height: 300px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    margin-top: 50px;
+    align-self: center;
+    margin-left: 110px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .4);
+
+
+
+    /* background-image: url("Background.jpg"), url("Tina.jpeg"); */
+    /* background-repeat: no-repeat, no-repeat;
+    background-size: 100% 60%;
+    background-position: top, bottom; */
+}
+
+#desc {
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profile {
+    background-color: pink;
+    width: 100%;
+    height: 10 v%;
+    bottom: 0;
+}
+
+/* .review {
+    width: 50%;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 100px;
+    margin: 0;
+} */
+
+.card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -60px;
+}
