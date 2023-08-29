@@ -1,0 +1,88 @@
+body {
+    background-color: lightgreen;
+}
+
+.flex-container {
+    background-color: white;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-element {
+    background-color: lightblue;
+    margin: 5px;
+    color: white;
+    text-align: center;
+}
+
+#two {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 60px;
+}
+
+.flex-container2 {
+    background-color: white;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-element2 {
+    background-color: lightblue;
+    margin: 2px;
+    color: white;
+    text-align: space-between;
+    text-align: center;
+}
+
+#twoo {
+    width: 80px;
+    height: 30px;
+    align-self: flex-end;
+}
+
+.flex-container3 {
+    background-color: white;
+    border: 2px solid orange;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.flex-element3 {
+    background-color: lightblue;
+    color: white;
+    text-align: space-between;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#logo {
+    background-color: purple;
+    text-align: center;
+    width: 10%;
+    height: 35px;
+    margin-left: 5px;
+}
+
+#team {
+    background-color: lightblue;
+    width: 40%;
+}
+
+#products {
+    background-color: coral;
+    width: 50%;
+    margin-right: 5px;
+}

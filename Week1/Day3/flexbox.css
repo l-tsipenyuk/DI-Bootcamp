@@ -1,0 +1,43 @@
+* {
+    background-color: pink;
+}
+
+.flex-container {
+    /* flex-direction:column-reverse; */
+    height: 500px;
+    border: 3px solid purple;
+    background-color: white;
+    color: yellow;
+    text-align: center;
+    display: flex;
+    /* default position of elements is a column. display flex makes it horizontal*/
+    /* flex-direction: column;   /*     with flexbox axes changed: the main axis is vertical now*/
+    justify-content: center;
+    /*along with the main axis!*/
+    justify-content: space-between;
+    /* justify-content: space-around; /*without spaces on the left and right of the page*/
+    justify-content: center;
+    /*flex-direction:row-reverse; /*changes the order of the elements*/
+    /* align-items: center;     /*to align elements in the cross axes in the center*/
+    flex-wrap:wrap; /*allows to wrap the content - very helpful for making a PAGE RESPONSIVE*/
+    align-content: center; /*center is better with justify-content: space-between. it affects the space between the border 
+    of item and border of parent box */
+    justify-content: space-around;
+}
+
+.flex-element {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+}
+
+#e {
+    align-self: center;
+    order: -1; /*to change the place of exact element - order is close to that (-2, -1, 0, 1, 2)*/
+    background-color:black;
+    flex-basis: 50px;
+    flex-grow: 150; /*how should the element growth if there's more space*/
+    flex-shrink: 5;
+}
+
