@@ -1,7 +1,5 @@
 body {
-    background-image: url("worldmap.png");
-    background-color: rgba(255, 255, 255, 0.993);
-    background-blend-mode: darken;
+    background-image: url("background.png");
     background-size: cover;
     font-family: 'Lato', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -10,20 +8,12 @@ body {
 .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 33.33%);
-    /* grid-template-areas:
-        "header header header"
-        "business users sold"
-        "Tina Corrine Chris" */
-    grid-template-rows: 30% 5% 30% 15% 15% 15% 10% 10% 10%;
-    /* gap: 20px; */
-    /* padding: 50px; */
+    grid-template-rows: 30% 5% 20% 10% 10% 10% 5% 5% 5%;
     height: 600px;
-    /* align-items: center; */
 
 }
 
 .header {
-    /* grid-area: header; */
     grid-column: 1/span 3;
 }
 
@@ -37,7 +27,6 @@ body {
 }
 
 .numbers {
-    /* grid-area: business; */
     grid-row: 2;
 }
 
@@ -46,7 +35,6 @@ body {
     font-size: 50px;
     text-align: center;
     color: rgb(55, 54, 158);
-    /* margin-top: 10px; */
     margin-bottom: 0;
 }
 
@@ -57,55 +45,10 @@ body {
     margin: 0;
 }
 
-/* 
-.users {
-    /* grid-area: users; */
-/* grid-column: 2;
-} */
-
-/* .users h3 {
-    font-weight: bold;
-    font-size: 50px;
-    text-align: center;
-    color: rgb(55, 54, 158);
-    margin-top: 10px;
-    margin-bottom: 0;
-} */
-
-/* .users p {
-    font-size: 20px;
-    text-align: center;
-    color: black;
-    margin: 0;
-} */
-
-/* .sold {
-    /* grid-area: sold; */
-/* grid-column: 3;
-} */
-
-/* .sold h3 {
-    font-weight: bold;
-    font-size: 50px;
-    text-align: center;
-    color: rgb(55, 54, 158);
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
-.sold p {
-    font-size: 20px;
-    text-align: center;
-    color: black;
-    margin: 0;
-} */
-
 .card {
-    /* grid-area: Tina; */
     grid-column: 1;
-    grid-row: 3/span 6; /*change 4 for other cards*/
-    width: 60%;
-    /* height: 300px; */
+    grid-row: 4/span 6;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,15 +56,8 @@ body {
     background-color: white;
     margin-top: 50px;
     align-self: center;
-    margin-left: 110px;
+    margin-left: 30px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .4);
-
-
-
-    /* background-image: url("Background.jpg"), url("Tina.jpeg"); */
-    /* background-repeat: no-repeat, no-repeat;
-    background-size: 100% 60%;
-    background-position: top, bottom; */
 }
 
 #desc {
@@ -133,20 +69,85 @@ body {
 .profile {
     background-color: pink;
     width: 100%;
-    height: 10 v%;
-    bottom: 0;
+    height: 10;
 }
 
-/* .review {
-    width: 50%;
-    background-color: white;
-    text-align: center;
-    padding: 10px;
-    padding-bottom: 100px;
-    margin: 0;
-} */
-
 .card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -60px;
+}
+
+/*card2*/
+
+.card2 {
+    grid-column: 2;
+    grid-row: 6/span 8;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    margin-top: 50px;
+    align-self: center;
+    margin-left: 30px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .4);
+    margin-bottom: 20px;
+}
+
+#desc2 {
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profile2 {
+    background-color: rgb(45, 45, 187);
+    width: 100%;
+    height: 10;
+    color: white;
+}
+
+.card2 img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -60px;
+}
+
+/*card 3*/
+
+.card3 {
+    grid-column: 3;
+    grid-row: 5/span 7;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    margin-top: 50px;
+    align-self: center;
+    margin-left: 30px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .4);
+}
+
+#desc3 {
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profile3 {
+    background-color: rgb(7, 148, 158);
+    width: 100%;
+    height: 10;
+    color: white;
+}
+
+.card3 img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
