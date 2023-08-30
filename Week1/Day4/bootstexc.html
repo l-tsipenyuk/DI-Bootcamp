@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Excercise</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css” />
+    <link rel="stylesheet" href="bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <style>
+        .alert {
+            display: none;
+        }
+    </style> -->
+
+</head>
+
+<body>
+    <h1>Excercise 1</h1>
+    <br>
+    <h2>1</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4" style="border: 1px solid black">1</div>
+            <div class="col-4" style="border: 1px solid black">1</div>
+            <div class="col-4" style="border: 1px solid black">1</div>
+        </div>
+        <div class="row">
+            <div class="col-4" style="border: 1px solid black">1</div>
+            <div class="col-4" style="border: 1px solid black">1</div>
+            <div class="col-4" style="border: 1px solid black">1</div>
+        </div>
+    </div>
+    <br>
+    <h2>2</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4" style="border: 2px solid goldenrod">1</div>
+            <div class="col-4 offset-4" style="border: 2px solid goldenrod">1</div>
+        </div>
+        <div class="row">
+            <div class="col-4" style="border: 2px solid goldenrod">1</div>
+            <div class="col-4 offset-4" style="border: 2px solid goldenrod">1</div>
+        </div>
+    </div>
+    <br>
+    <h2>3</h2>
+    <!-- <div class="container-fluid"> --> <!--without a container it's not responsive-->
+    <div class="row">
+        <div class="col-6" style="border: 2px solid red">1</div>
+        <div class="col-6" style="border: 2px solid red">1</div>
+    </div>
+    <div class="row">
+        <div class="col-6" style="border: 2px solid red">1</div>
+        <div class="col-6" style="border: 2px solid red">1</div>
+        <!-- </div> -->
+    </div>
+    <br>
+    <h2>4</h2>
+    <div class="container-fluid">
+        <div class="row" style="border: 2px solid blueviolet">
+            <div class="col-6" style="border: 2px solid blueviolet">1</div>
+            <div class="col-6" style="border: 2px solid blueviolet">1</div>
+        </div>
+    </div>
+    <br>
+    <h2>5</h2>
+    <div class="container-fluid">
+        <div class="row" style="border: 2px solid coral">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3" style="border: 2px solid coral">1</div>
+            <!--smaller the size - bigger the column-->
+            <div class="col-4 col-sm-3 col-md-4 col-lg-5" style="border: 2px solid coral">1</div>
+            <div class="col-4 col-sm-3 col-md-4 col-lg-4" style="border: 2px solid coral">1</div>
+        </div>
+    </div>
+    <br>
+    <h1>Excercise 2</h1>
+
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+    <script>const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                appendAlert('Nice, you triggered this alert message!', 'success')
+            })
+        }
+    </script>
+
+</body>
+
+</html>
