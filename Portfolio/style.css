@@ -1,0 +1,11 @@
+* {
+    font-family: 'Inter', sans-serif !important;
+}
+
+body {
+    background-color: #ece4f1;;
+}
+
+.col-6 h4, a{
+    margin-left: 5%;
+}
