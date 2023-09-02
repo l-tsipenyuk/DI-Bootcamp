@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #ece4f1;
+    background-color: #ede5f1 !important;
     ;
 }
 
@@ -64,19 +64,6 @@ a {
     background-color: #e7d9ed !important;
 }
 
-/* @media screen and (max-width: 680px) {
-    .img {
-        height: 125px !important;
-        width: 140px !important;
-        margin-top: 50% !important;
-    }
-} */
-
-/* .card {
-    width: 80%;
-    height: auto;
-} */
-
 .card-wrapper {
     perspective: 1000px;
 }
@@ -110,4 +97,8 @@ a {
 
 .card-body a {
     cursor: pointer;
+}
+
+.card {
+    max-width: 100%;
 }
