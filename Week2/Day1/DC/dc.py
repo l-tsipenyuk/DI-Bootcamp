@@ -21,12 +21,4 @@
 #         print(value[y], end=' ')
 #     print()  
 
-#4
-value = "Moscow"
-from random import shuffle
-# for x in range (len(value))
-# shuffle(x)
 
-shuf = list([value])
-random.shuffle(shuf)
-print(shuf)
