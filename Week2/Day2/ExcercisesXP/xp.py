@@ -207,18 +207,21 @@
 # I made your egg sandwich
 # I made your chicken sandwich
 
-sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
-orders = []
-while True:
-    user_input = input("What do you want to order? Choose from our menu. If you're done type 'quit') ")
-    if user_input == "quit":
-        # print(f"Alrighty. Your bill will be {total} dollars")
-        print(orders)
-        break
-    else:
-        if user_input == "Pastrami sandwich":
-            print("Sorry, we ran out of pastrami. Please choose something else")
-            orders.pop("Pastrami sandwich")
-        else:  
-            orders += user_input
-        orders.append(user_input)  
+# sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+# orders = []
+
+# while "Pastrami sandwich" in sandwich_orders:
+#     sandwich_orders.remove("Pastrami sandwich")
+# while True:
+#     user_input = input("What do you want to order? Choose from our menu. If you're done, type 'quit': ") 
+#     if user_input == "quit":
+#         break
+#     elif user_input == "Pastrami sandwich":
+#         print("Sorry, we ran out of pastrami. Please choose something else")
+#     else:
+#         orders.append(user_input)
+# finished_orders = []
+# if orders != []:
+#     finished_orders.append(orders)
+#     for order in finished_orders[0]:
+#         print(f"I made your {order}.")
