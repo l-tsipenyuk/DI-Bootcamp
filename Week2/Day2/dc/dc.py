@@ -12,3 +12,14 @@
 
 #2
 
+# user_input = input("Type a word with duplicates")
+# list_user = list(user_input)
+# correct = [list_user[0]]
+# for i in range(1, len(list_user)): 
+#     if list_user[i] != list_user[i-1]:
+#         correct.append(list_user[i])
+# correct_word = "".join(correct)
+# print(f"Correct word is {correct_word}")
+    
+
+
