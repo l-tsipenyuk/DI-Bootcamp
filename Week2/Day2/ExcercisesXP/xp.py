@@ -116,19 +116,109 @@
 # As they enter each topping, print a message saying you’ll add that topping to their pizza.
 # Upon exiting the loop print all the toppings on the pizza pie and what the total price is (10 + 2.5 for each topping).
 
-all_toppings = []
-price = float(2.5)
+# all_toppings = []
+# price = float(2.5)
 
+# while True:
+#     user_input = input("Type in some pizza toppings (if you're done, type 'quit') ")
+#     if user_input == "quit":
+#         if len(all_toppings) == 0:
+#             print("That's it. Your bill will be 10 dollars")
+#         else:
+#             amount = len(all_toppings)
+#             bill = 10 + price * amount
+#             print(f"That's it. Your bill will be {bill} dollars")
+#         break
+#     else:
+#         all_toppings.append(user_input)
+
+# Exercise 9: Cinemax
+# Instructions
+# A movie theater charges different ticket prices depending on a person’s age.
+# if a person is under the age of 3, the ticket is free.
+# if they are between 3 and 12, the ticket is $10.
+# if they are over the age of 12, the ticket is $15.
+
+# Ask a family the age of each person who wants a ticket.
+
+# Store the total cost of all the family’s tickets and print it out.
+
+# A group of teenagers are coming to your movie theater and want to watch a movie that is restricted for people between the ages of 16 and 21.
+# Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
+# At the end, print the final list.
+
+
+# order = []
+# price3 = 0
+# price12 = 10
+# price13 = 15
+# total1 = 0  
+# total2 = 0
+# total3 = 0
+
+# while True:
+#     user_input = input("What's your age? (if you mentioned all the family members, type 'quit') ")
+#     if user_input == "quit":
+#         bill = total1 + total2 + total3
+#         print(f"That's it. Your bill will be {bill} dollars")
+#         break
+#     else:
+#         age = int(user_input)
+#         if 0 <= age <= 3:  
+#             total1 += price3 
+#         elif 4 <= age <= 12:  
+#             total2 += price12 
+#         elif age > 12:
+#             total3 += price13 
+#         order.append(age)  
+
+#for a teenager group
+
+# order = []
+# price = 15
+# total = 0  
+
+# while True:
+#     user_input = input("What's your age? (we won't sell you a ticket if you're age is between 16 and 21). If you mentioned all of your company members, type 'quit') ")
+#     if user_input == "quit":
+#         print(f"Alrighty. Your bill will be {total} dollars")
+#         break
+#     else:
+#         age = int(user_input)
+#         if 16 <= age <= 21:  
+#             order.pop()
+#         else:  
+#             total += price
+#         order.append(age)  
+
+# Exercise 10 : Sandwich Orders
+# Instructions
+# Using the list below :
+
+# sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+
+# The deli has run out of pastrami, use a while loop to remove all occurrences of “Pastrami sandwich” from sandwich_orders.
+# We need to prepare the orders of the clients:
+# Create an empty list called finished_sandwiches.
+# One by one, remove each sandwich from the sandwich_orders while adding them to the finished_sandwiches list.
+# After all the sandwiches have been made, print a message listing each sandwich that was made, such as:
+# I made your tuna sandwich
+# I made your avocado sandwich
+# I made your egg sandwich
+# I made your chicken sandwich
+
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+orders = []
 while True:
-    user_input = input("Type in some pizza toppings (if you're done, type 'quit') ")
+    user_input = input("What do you want to order? Choose from our menu. If you're done type 'quit') ")
     if user_input == "quit":
-        if len(all_toppings) == 0:
-            print("That's it. Your bill will be 10 dollars")
-        else:
-            amount = len(all_toppings)
-            bill = 10 + price * amount
-            print(f"That's it. Your bill will be {bill} dollars")
+        # print(f"Alrighty. Your bill will be {total} dollars")
+        print(orders)
         break
     else:
-        all_toppings.append(user_input)
-
+        if user_input == "Pastrami sandwich":
+            print("Sorry, we ran out of pastrami. Please choose something else")
+            orders.pop("Pastrami sandwich")
+        else:  
+            orders += user_input
+        orders.append(user_input)  
