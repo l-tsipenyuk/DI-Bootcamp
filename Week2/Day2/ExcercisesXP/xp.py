@@ -98,3 +98,37 @@
 # If the user’s input is in the favorite fruits list, print “You chose one of your favorite fruits! Enjoy!”.
 # If the user’s input is NOT in the list, print, “You chose a new fruit. I hope you enjoy”.
 
+# user_input = input("Type your favourite fruits, separated by a single space ")
+# list_fruits = user_input.split()
+# user_input_extra = input("Input a name of any fruit ")
+# list_fruits_extra = user_input_extra.split()
+# list_merged = list_fruits + list_fruits_extra
+# duplicates = any(list_merged.count(x) > 1 for x in list_merged)
+# if duplicates == True:
+#     print("You chose one of your favorite fruits! Enjoy!")
+# else:
+#     print("You chose a new fruit. I hope you enjoy")
+
+
+# Exercise 8: Who Ordered A Pizza ?
+# Instructions
+# Write a loop that asks a user to enter a series of pizza toppings, when the user inputs ‘quit’ stop asking for toppings.
+# As they enter each topping, print a message saying you’ll add that topping to their pizza.
+# Upon exiting the loop print all the toppings on the pizza pie and what the total price is (10 + 2.5 for each topping).
+
+all_toppings = []
+price = float(2.5)
+
+while True:
+    user_input = input("Type in some pizza toppings (if you're done, type 'quit') ")
+    if user_input == "quit":
+        if len(all_toppings) == 0:
+            print("That's it. Your bill will be 10 dollars")
+        else:
+            amount = len(all_toppings)
+            bill = 10 + price * amount
+            print(f"That's it. Your bill will be {bill} dollars")
+        break
+    else:
+        all_toppings.append(user_input)
+
