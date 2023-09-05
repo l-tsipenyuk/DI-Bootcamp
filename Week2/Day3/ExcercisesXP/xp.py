@@ -96,13 +96,105 @@
 # 13. Use a method to add the information from the dictionary more_on_zara to the dictionary brand.
 # 14. Print the value of the key number_stores. What just happened ?
 
-name: Zara 
-creation_date: 1975 
-creator_name: Amancio Ortega Gaona 
-type_of_clothes: men, women, children, home 
-international_competitors: Gap, H&M, Benetton 
-number_stores: 7000 
-major_color: 
-    France: blue, 
-    Spain: red, 
-    US: pink, green
+#2
+# brand = {
+#     "name": "Zara",
+#     "creation_date": 1975,
+#     "creator_name": "Amancio Ortega Gaona",
+#     "type_of_clothes": ["men", "women", "children", "home"],
+#     "international_competitors": ["Gap", "H&M", "Benetton"],
+#     "number_stores": 7000,
+#     "major_color": {
+#         "France": "blue",
+#         "Spain": "red",
+#         "US": "pink, green"
+#     }
+# }
+
+#3
+# brand["number_stores"] = 2
+# print(brand)
+
+#4
+# 
+# types = ",".join(brand["type_of_clothes"])
+# print(f"Zara's clients are rich people. The enjoy following types of clothes:{types}.")
+
+#5
+# brand["country_creation"] = "Spain"
+# print(brand)
+
+#6
+# brand["international_competitors"] += ["Desigual"]
+# print(brand)
+
+#7
+# del brand["creation_date"]
+# print(brand)
+
+#8
+# print(brand["international_competitors"][2])
+
+#9
+# print(brand["major_color"]["US"])
+
+#10
+# print(f"Amount of key key value pairs is {len(brand)}")
+
+#11
+# print(brand.keys())
+
+#12
+# more_on_zara = {
+#     "creation_date": 1975,
+#     "number_stores": 10000,
+# }
+
+# # print(more_on_zara)
+
+# #13
+# new_dict = brand | more_on_zara
+# print(new_dict)
+
+# #14
+# print(new_dict["number_stores"])
+#the number of stores value was substituted by the value from the new dictionary
+
+# Exercise 4 : Disney Characters
+# Instructions
+# Use this list :
+
+# users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+# Analyse these results :
+
+# #1/
+
+# >>> print(disney_users_A)
+# {"Mickey": 0, "Minnie": 1, "Donald": 2, "Ariel": 3, "Pluto": 4}
+
+# #2/
+
+# >>> print(disney_users_B)
+# {0: "Mickey",1: "Minnie", 2: "Donald", 3: "Ariel", 4: "Pluto"}
+
+# #3/ 
+
+# >>> print(disney_users_C)
+# {"Ariel": 0, "Donald": 1, "Mickey": 2, "Minnie": 3, "Pluto": 4}
+
+
+# Use a for loop to recreate the 1st result. Tip : don’t hardcode the numbers.
+# Use a for loop to recreate the 2nd result. Tip : don’t hardcode the numbers.
+# Use a method to recreate the 3rd result. Hint: The 3rd result is sorted alphabetically.
+# Only recreate the 1st result for:
+# The characters, which names contain the letter “i”.
+# The characters, which names start with the letter “m” or “p”.
+
+#1
+# users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+# numbers = list(range(0,5))
+# all2 = zip(users, numbers)
+# dict1 = dict(all2)
+# print(dict1)
+
+#2
