@@ -198,3 +198,44 @@
 # print(dict1)
 
 #2
+# users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+# new_list = enumerate(users)
+# print(dict(new_list))
+
+#3
+# users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+# users.sort()
+# numbers = list(range(0,5))
+# all2 = zip(users,numbers)
+# dict1 = dict(all2)
+# print(dict1)
+
+#4
+
+# users = ["Mickey", "Minnie", "Donald", "Ariel", "Pluto"]
+# users2 = []
+# numbers = list(range(0, 5))
+# all2 = zip(users, numbers)
+# dict1 = {}
+# for user, number in all2:
+#     dict1[user] = number
+# for x in users[:]:  
+#     if "i" in x:
+#         users2.append(x)
+
+# print(users2)
+
+# users = ["Mickey", "Minnie", "Donald", "Ariel", "Pluto"]
+# users2 = []
+# numbers = list(range(0, 5))
+# all2 = zip(users, numbers)
+# dict1 = {}
+# for user, number in all2:
+#     dict1[user] = number
+# for x in users[:]:  
+#     if x[0] == "M":
+#         users2.append(x)
+#     elif x[0] == "P":
+#         users2.append(x)
+
+# print(users2)
