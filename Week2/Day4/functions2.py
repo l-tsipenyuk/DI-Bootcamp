@@ -73,7 +73,9 @@ def price_flight (destination):
         return 600
 
 def total():
-    final_total = get_price_car(45) + price_flight("Paris")
-    print(final_total)
+    age = int(input("what is yout age? \n"))
+    destination = input("where do you go? \n")
+    final_total = get_price_car(age) + price_flight(destination)
+    print(f"You vacation will cost {final_total} dollars")
 
 total()
