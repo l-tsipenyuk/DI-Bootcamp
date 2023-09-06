@@ -69,9 +69,9 @@
 # for number in range (21):
 #     print(number)
 
-# my_list = list(range(21))
+# my_list = list(range(1,21))
 # for number in my_list:
-#     if my_list[number] % 2 == 0:
+#     if my_list.index(number) % 2 == 0:
 #         print(number)
 #     else: 
 #         pass
