@@ -255,43 +255,130 @@
 
 #bonus: if the month is a number 
 
-import random
+# import random
 
-def get_random_temp(monthnum):
-    # monthnum = int(input("Type in the number of month: \n"))
-    if  monthnum == 12 or monthnum <=2: 
-        season = "winter"
-        temp = random.randint(-10, 16)
-        return season, temp
-    elif 3 <= monthnum  <=5:
-        season = "spring"
-        temp = random.randint(17, 23)
-        return season, temp
-    elif 6 <= monthnum  <=8:
-        season = "summer"
-        temp = random.randint(24, 40)
-        return season, temp
-    elif 9 <= monthnum  <=11:
-        season = "autumn"
-        temp = random.randint(18, 28)
-        return season, temp
-
-
-def main ():
-    monthnum = int(input("Type in the number of month: \n"))
-    season, temp = get_random_temp(monthnum)
-    if temp < 0:
-        print(f"It's freezing. The temperature is {temp}, the season is {season}")
-    elif 0 < temp < 16:
-        print(f"Quite chilly. The temperature is {temp}, the season is {season}")
-    elif 17 < temp < 23:
-        print(f"Don't forget the coat. The temperature is {temp}, the season is {season}")
-    elif 24 < temp < 32:
-        print(f"Seems like it's getting hot. The temperature is {temp}, the season is {season}")
-    elif 33 < temp < 40:
-        print(f"Drink more water! The temperature is {temp}, the season is {season}")
-
-main()
+# def get_random_temp(monthnum):
+#     # monthnum = int(input("Type in the number of month: \n"))
+#     if  monthnum == 12 or monthnum <=2: 
+#         season = "winter"
+#         temp = random.randint(-10, 16)
+#         return season, temp
+#     elif 3 <= monthnum  <=5:
+#         season = "spring"
+#         temp = random.randint(17, 23)
+#         return season, temp
+#     elif 6 <= monthnum  <=8:
+#         season = "summer"
+#         temp = random.randint(24, 40)
+#         return season, temp
+#     elif 9 <= monthnum  <=11:
+#         season = "autumn"
+#         temp = random.randint(18, 28)
+#         return season, temp
 
 
+# def main ():
+#     monthnum = int(input("Type in the number of month: \n"))
+#     season, temp = get_random_temp(monthnum)
+#     if temp < 0:
+#         print(f"It's freezing. The temperature is {temp}, the season is {season}")
+#     elif 0 < temp < 16:
+#         print(f"Quite chilly. The temperature is {temp}, the season is {season}")
+#     elif 17 < temp < 23:
+#         print(f"Don't forget the coat. The temperature is {temp}, the season is {season}")
+#     elif 24 < temp < 32:
+#         print(f"Seems like it's getting hot. The temperature is {temp}, the season is {season}")
+#     elif 33 < temp < 40:
+#         print(f"Drink more water! The temperature is {temp}, the season is {season}")
 
+# main()
+
+# Exercise 8 : Star Wars Quiz
+# Instructions
+# This project allows users to take a quiz to test their Star Wars knowledge.
+# The number of correct/incorrect answers are tracked and the user receives different messages depending on how well they did on the quiz.
+
+# Here is an array of dictionaries, containing those questions and answers
+
+# data = [
+#     {
+#         "question": "What is Baby Yoda's real name?",
+#         "answer": "Grogu"
+#     },
+#     {
+#         "question": "Where did Obi-Wan take Luke after his birth?",
+#         "answer": "Tatooine"
+#     },
+#     {
+#         "question": "What year did the first Star Wars movie come out?",
+#         "answer": "1977"
+#     },
+#     {
+#         "question": "Who built C-3PO?",
+#         "answer": "Anakin Skywalker"
+#     },
+#     {
+#         "question": "Anakin Skywalker grew up to be who?",
+#         "answer": "Darth Vader"
+#     },
+#     {
+#         "question": "What species is Chewbacca?",
+#         "answer": "Wookiee"
+#     }
+# ]
+
+
+# Create a function that asks the questions to the user, and check his answers. Track the number of correct, incorrect answers. Create a list of wrong_answers
+# Create a function that informs the user of his number of correct/incorrect answers.
+# Bonus : display to the user the questions he answered wrong, his answer, and the correct answer.
+# If he had more then 3 wrong answers, ask him to play again.
+
+# data = [
+#     {
+#         "question": "What is Baby Yoda's real name?",
+#         "answer": "Grogu"
+#     },
+#     {
+#         "question": "Where did Obi-Wan take Luke after his birth?",
+#         "answer": "Tatooine"
+#     },
+#     {
+#         "question": "What year did the first Star Wars movie come out?",
+#         "answer": "1977"
+#     },
+#     {
+#         "question": "Who built C-3PO?",
+#         "answer": "Anakin Skywalker"
+#     },
+#     {
+#         "question": "Anakin Skywalker grew up to be who?",
+#         "answer": "Darth Vader"
+#     },
+#     {
+#         "question": "What species is Chewbacca?",
+#         "answer": "Wookiee"
+#     }
+# ]
+
+# wrong_answers = []
+# wrong_questions = []
+
+# def quiz():
+#     wrong_amount = 0  
+#     for question_data in data:
+#         question = question_data["question"]
+#         your_answer = input(f"{question}\nType your answer: ")
+#         right_answer = question_data["answer"]
+#         if your_answer == right_answer:
+#             print("Congrats! It's correct.")
+#         else:
+#             wrong_answers.append(your_answer)
+#             wrong_questions.append(question)
+#             print(f"It's wrong. The right answer was {right_answer}.")
+#             wrong_amount += 1  
+#             if (wrong_amount) > 3:
+#                 print("You lost. Try once again.")
+#                 break
+#     print(f"You have {wrong_amount} wrong answers out of {len(data)} questions.")  
+
+# quiz()
