@@ -37,7 +37,7 @@
 # Using the computer_brand variable print a sentence that states the following: "I have a <computer_brand> computer"
 
 # computer_brand = "Asus"
-# print("I have an", computer_brand, "computer")
+# print(f"I have an {computer_brand} computer")
 
 # Exercise 5 : Your Information
 # Instructions
@@ -70,7 +70,7 @@
 # Write code that asks the user for a number and determines whether this number is odd or even.
 
 # value = int(input("Insert the number \n"))
-# if (value % 2) == 0:
+# if value % 2 == 0:
 #     print("The number is even")
 # else: 
 #     print("The number is odd")
@@ -79,9 +79,9 @@
 # Instructions
 # Write code that asks the user for their name and determines whether or not you have the same name, print out a funny message based on the outcome.
 
-# value = (input("What is your name? \n"))
+# value = input("What is your name? \n")
 # my_name = "Liya"
-# if (value == my_name):
+# if value == my_name:
 #     print("We share the same name!")
 # else: 
 #     print("We obviously don't share the same name")
