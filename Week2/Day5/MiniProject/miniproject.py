@@ -33,14 +33,15 @@ def check_win():
     for row in board:
         if row[0] == row[1] == row[2] and row[0] == row[1] == row[2] != " ":
             print("We have a winner!")
-            return  
+            return True 
     for col in range(3):
         if board[0][col] == board[1][col] == board[2][col] and board[0][col] == board[1][col] == board[2][col] != " ":
             print("We have a winner!")
-            return 
+            return True
     if (board[0][0] == board[1][1] == board[2][2] or board[0][2] == board[1][1] == board[2][0]) and board[1][1] != " ":
         print("We have a winner!")
-        return 
+        return True
+    return False
 
 def play():
     global sign
@@ -54,13 +55,16 @@ def play():
             sign = "X"
         else:
             sign = "O"
-        if count >= 9:
+        if count > 4:  
+            if check_win():
+                break
+        if count == 9: 
             print("It's a tie. Try one more time")
-            break
-        if check_win():
             break
 
 play()
+
+
 
 
 
