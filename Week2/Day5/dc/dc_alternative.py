@@ -11,18 +11,18 @@
 
 #2
 
-def longest_word(user_input):
-    sentence_list = user_input.split(" ")
-    longest_word = max(sentence_list, key = len)
-    print(f"The longest word in your sentence is {longest_word}")
+# def longest_word(user_input):
+#     sentence_list = user_input.split(" ")
+#     longest_word = max(sentence_list, key = len)
+#     print(f"The longest word in your sentence is {longest_word}")
 
-user_input = input("Type your sentence: \n")
-longest_word(user_input)
+# user_input = input("Type your sentence: \n")
+# longest_word(user_input)
 
 #another option. pay attention! it occurs on interviews
 
 # def longest_word():
-#     sentence = "I like programming in Python"
+#     sentence = input("Type in your sentence: \n")
 #     list_words = sentence.split(" ")
 #     longest_word = list_words[0]
 #     for word in list_words: 
@@ -33,7 +33,7 @@ longest_word(user_input)
 # longest_word()
 
 def longest_word():
-    sentence = "I like programming and asdfrewqgtr in Python"
+    sentence = input("Type in your sentence: \n")
     list_words = sentence.split(" ")
     longest_words = []
     longest_word = list_words[0]

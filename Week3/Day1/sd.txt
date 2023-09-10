@@ -1,0 +1,49 @@
+class Zoo: 
+    def __init__(self, zoo_name):
+        self.zoo_name = zoo_name
+        self.animals = []
+        self.animals_new_list = []
+        self.animals_sold_list = []
+    def add_animal(self, *new_animals):
+        for new_animal in new_animals:
+            self.animals.append(new_animal)
+            self.animals_new_list.append(new_animal)
+        return new_animal
+    def get_animals (self):
+        return self.animals
+    def sell_animal (self, sold_animal):
+        if sold_animal in self.animals:
+            self.animals.remove(sold_animal)
+            self.animals_sold_list.append(sold_animal)
+            return f"The {sold_animal} is sold. New list of animals is {self.animals}."
+        else:
+            return f"The {sold_animal} is not in the zoo."
+    def sort_animal(self):
+        animal_dict = {}
+        for animal in self.animals:
+            first_letter = animal[0].upper()
+            if first_letter not in animal_dict:
+                animal_dict[first_letter] = []
+            animal_dict[first_letter].append(animal)
+        
+        sorted_animals = {}
+        index = 1
+        for key, value in sorted(animal_dict.items()):
+            sorted_animals[index] = value
+            index += 1
+        
+        return sorted_animals
+
+    def get_groups_words (self): 
+        sold_animals = ", ".join(self.animals_sold_list)
+        new_animals = ", ".join(self.animals_new_list)
+        all_animals = ", ".join(self.animals)
+        return f"These animals are new: {new_animals}. These animals are sold: {sold_animals}. This is our full list of animals: {all_animals}."
+ 
+  
+
+first = Zoo("Ramat Gan safari")
+first.add_animal("Elephant", "Ezebra", "Monkey", "Penguin", "Pigeon")
+first.sell_animal("Pigeon")
+first.sell_animal("Penguin")
+print(first.sort_animal())
