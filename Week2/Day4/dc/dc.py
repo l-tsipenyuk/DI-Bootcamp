@@ -10,7 +10,7 @@ def message():
     ^r!"""
     rows = string.strip().split('\n')
     for row in rows:
-        row_size = len(row)
+        row_size = (len(row))
     matrix = [[' ' for _ in range(row_size)] for _ in range(len(rows))]
     for x, row in enumerate(rows):
         for y, letter in enumerate(row):
@@ -26,4 +26,5 @@ def message():
     return message  
 
 print(message())
+
 
