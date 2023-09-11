@@ -12,3 +12,7 @@ class GermanShepard(Dog):
 
 my_dog = GermanShepard("Rex",100)
 my_dog.jump()
+
+
+
+
