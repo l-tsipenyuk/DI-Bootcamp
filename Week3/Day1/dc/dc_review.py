@@ -63,7 +63,7 @@ class Farm:
             if self.all_animals[type] > 1:
                 all_types[index] += "s" 
         sentence_animals = ", ".join(all_types[0:-1])        
-        sentence = f"{self.name}'s farm has {sentence_animals}"
+        sentence = f"{self.name}'s farm has {sentence_animals},"
         return sentence
 
 
