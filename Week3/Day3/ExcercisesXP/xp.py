@@ -189,8 +189,8 @@
 # Instructions
 # Create a function that accepts a birthdate as an argument (in the format of your choice), then displays a message stating how many minutes the user lived in his life.
 
-import datetime
-from datetime import datetime, timedelta
+# import datetime
+# from datetime import datetime, timedelta
 
 # def life_minutes(birthday_date):
 #     now = datetime.now()
@@ -227,19 +227,26 @@ from datetime import datetime, timedelta
 # Create an empty list called users. Tip: It should be a list of dictionaries.
 # Create a function that adds new dictionaries to the users list. Each user has the following keys: name, adress, langage_code. Use faker to populate them with fake data.
 
-from faker import Faker
-fake = Faker()
-# users = [{"name": x, "address": y, "language_code": z}]
-def fill_in_the_data():
-    # user = [{}]
-    key1 = "name"
-    key2 = "address"
-    # key3 = "language_code"
-    value1 = fake.name()
-    value2 = fake.address()
-    user = {key1 : value1, key2 : value2}
-    return user
+# from faker import Faker
+# fake = Faker()
+
+# def fill_in_the_data():
+#     key1 = "name"
+#     key2 = "address"
+#     key3 = "language_code"
+#     value1 = fake.name()
+#     value2 = fake.address()
+#     value3 = fake.language_code()
+#     user = {key1 : value1, key2 : value2, key3 : value3}
+#     return user
+
+# user_list = []
+# for _ in range(3):
+#     user_list.append(fill_in_the_data())
+
+# for user in user_list:
+#     print(user)
 
 
-print(fill_in_the_data())
+
 
