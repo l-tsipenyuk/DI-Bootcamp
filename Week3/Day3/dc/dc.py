@@ -34,8 +34,8 @@ class Circle:
 
 
 a = Circle(5)
-d = Circle(10)
-b = Circle(15)
+d = Circle(15)
+b = Circle(10)
 c = Circle(25)
 # print(a.calculate_area())
 # print(a)
