@@ -34,7 +34,6 @@ class Pagination():
 
 
 
-
 alphabetList = list("abcdefghijklmnopqrstuvwxyz")
 example = Pagination(alphabetList, 4)
 # print(example.get_visible_items())
@@ -47,3 +46,14 @@ print(example.prev_page())
 
 
 
+#possible improvement not to return the list in every method
+
+    # def get_all_pages(self):
+    #     if self.items is None:
+    #         return []
+    #     n = self.pageSize
+    #     return [self.items[i * n:(i + 1) * n] for i in range((len(self.items) + n - 1) // n)]
+
+    # def get_visible_items(self):
+    #     pages = self.get_all_pages()
+    #     return pages[self.currentpage] if pages else []
