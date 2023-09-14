@@ -22,7 +22,7 @@ class AnagramChecker:
             if input_word in nltk.corpus.words.words():
                 anagrams = self.get_anagrams(input_word)
                 if anagrams:
-                    print(f"Anagrams for '{input_word}' are '{' ,'.join(anagrams)}'")
+                    print(f"Anagrams for '{input_word}' are '{', '.join(anagrams)}'")
                 else:
                     print(f"There are no anagrams for the word '{input_word}'")
                 break
