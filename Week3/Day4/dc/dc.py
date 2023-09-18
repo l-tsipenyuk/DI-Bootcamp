@@ -4,6 +4,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 class Text:
     def __init__(self, string):
         self.string = string
+        self.frequency = self.frequency()
 
     def frequency(self):
         lower = self.string.lower()
@@ -13,15 +14,22 @@ class Text:
             word_count = word_list.count(word)
             if  word_count > 1:
                 dictionary[word] = word_count
+        return dictionary
 
-        set_list = set(word_list)
-        non_repeating = set_list.difference(dictionary.keys())
-        most_frequent = max(word_list, key = word_list.count)
-
-        if dictionary == {}:
+    def frequency_result(self):
+  
+        if not self.frequency:
             return "There are no dublicates in the provided text."
         else:
-            return f"Here are non-repeating words: {non_repeating}, here are repeating words: {dictionary}. The most frequent word is '{most_frequent}'."      
+            non_repeating = set(self.frequency.keys())
+            most_frequent = max(self.frequency, key = self.frequency.get)
+            return f"Here are non-repeating words: {non_repeating}, here are repeating words: {self.frequency}. The most frequent word is '{most_frequent}'."    
+
+    def get_frequency_word(self, word):
+        if word in self.frequency:
+            return f"The word '{word}' repeats {self.frequency[word]} times."
+        else:
+            return None
     
     @classmethod   
     def from_file(cls, filename):
@@ -33,13 +41,13 @@ class Text:
                 text += word + " "
         return cls(text.strip())
 
-
-
 # example = Text("A good book would sometimes cost as much as a good house.")
-# print(example.frequency())
+# print(example.frequency_result())
+# print(example.get_frequency_word("good"))
 
 example2 = Text.from_file(dir_path + r"\\stranger.txt")
-print(example2.frequency())
+# print(example2.frequency_result())
+print(example2.get_frequency_word("slight"))
 
 
 
