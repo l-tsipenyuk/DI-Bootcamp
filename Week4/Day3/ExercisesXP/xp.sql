@@ -116,3 +116,9 @@
 -- where customer.first_name = 'Matthew' and customer.last_name = 'Mahan';
 
 -- The 4th film : His friend Matthew Mahan watched this film, as well. It had the word “boat” in the title or description, and it looked like it was a very expensive DVD to replace.
+-- select film.title, replacement_cost
+-- from (actor join film_actor on actor.actor_id = film_actor.actor_id)
+-- join film on film_actor.film_id = film.film_id
+-- where film.description like '%Boat%' or film.title like '%Boat%' order by replacement_cost desc;
+
+-- As in previous task seems like Matthew Mahan ordered only 1 movie (without 'boat'). So I sorted films meeting other condition with respect to their replacement cost.
