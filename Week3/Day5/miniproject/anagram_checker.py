@@ -39,6 +39,15 @@ class AnagramChecker:
                 anagrams.append(i)
         return anagrams
 
+class MenuManager():
+    def get_by_name(self, search_name):
+        try:
+            query = '''SELECT * FROM menu_items WHERE item_name = %s;'''
+            cursor.execute(query, (search_name,))
+            output = cursor.fetchall()
+            return output
+        except Exception as e:
+            print(f"Error: {e}")
 
 
 
