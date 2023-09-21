@@ -79,8 +79,8 @@ class MenuItem:
         cursor.execute(query) 
         connection.commit()
     
-a = MenuItem('Good Soup',25)
-b = MenuItem('Steak', 45)
+# a = MenuItem('Good Soup',25)
+# b = MenuItem('Steak', 45)
 # b.save()
 # a.save()
 # a.delete()
@@ -92,7 +92,9 @@ class MenuManager():
             query = '''select * from menu_items where item_name = %s; '''
             cursor.execute(query, (search_name,))
             output = cursor.fetchall()
-            return output
+            for row in output:
+                print("Item: ", row['item_name'])
+                print("Price: ", row['item_price'])
         except Exception as e:
             None
         
@@ -101,10 +103,16 @@ class MenuManager():
             query = '''select * from menu_items; '''
             cursor.execute(query)
             output = cursor.fetchall()
-            return output
+            for row in output:
+                print("Item: ", row['item_name'])
+                print("Price: ", row['item_price'])
         except Exception as e:
             None
 
-c = MenuManager()
+# c = MenuManager()
 # print(c.get_by_name('Good Soup'))
-print(c.all_items())
+# print(c.all_items())
+
+# print(new_output)
+
+# print(out)
