@@ -1,0 +1,131 @@
+    <!-- projects
+    <div class="container">
+        <!-- <div class="row row-cols-1 row-cols-md-3"> -->
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col-4 mb-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Rotating card -->
+                            <div class="card-wrapper">
+                                <div id="card-1" class="card card-rotating text-center">
+                                    <!-- Front Side -->
+                                    <div class="face front">
+                                        <div class="card-up">
+                                            <img class="card-img-top" src="image3.png" alt="not yet">
+                                        </div>
+                                        <div class="card-body">
+                                            <a class="rotate-btn" data-card="card-1">Click to
+                                                rotate</a>
+                                        </div>
+                                    </div>
+                                    <!-- Back Side -->
+                                    <div class="face back">
+                                        <div class="card-body">
+                                            <h4 class="font-weight-bold mb-0">Noa Kirel Tribute Page</h4>
+                                            <hr>
+                                            <p><i>Languages used: HTML, CSS</i><br>
+                                                A responsive and well-structured
+                                                tribute page dedicated to my favorite singer.
+                                                <hr>
+                                                <a href="https://github.com/l-tsipenyuk/Noa-Kirel"
+                                                    class="btn btn-outline-dark">Explore
+                                                    on
+                                                    GitHub</a> <br>
+                                                <a class="rotate-btn" data-card="card-1">Click to
+                                                    rotate
+                                                    back</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Rotating card -->
+                            <div class="card-wrapper">
+                                <div id="card-2" class="card card-rotating text-center">
+                                    <!-- Front Side -->
+                                    <div class="face front">
+                                        <div class="card-up">
+                                            <img class="card-img-top" src="image4.png" alt="not yet">
+                                        </div>
+                                        <div class="card-body">
+                                            <a class="rotate-btn" data-card="card-2">Click to
+                                                rotate</a>
+                                        </div>
+                                    </div>
+                                    <!-- Back Side -->
+                                    <div class="face back">
+                                        <div class="card-body">
+                                            <h4 class="font-weight-bold mb-0">Recreation of Shopify's Landing page <br>
+                                                <i>Languages used: HTML, CSS</i></h4>
+                                            <hr>
+                                            <p>
+                                                Recreation of a responsive and well-structured
+                                                landing page.
+                                                <hr>
+                                                <a href="https://github.com/l-tsipenyuk/DI-Bootcamp/tree/main/Week1/Day3/ExcercisesXP/Landpages/1st"
+                                                    class="btn btn-outline-dark">Explore
+                                                    on
+                                                    GitHub</a> <br>
+                                                <a class="rotate-btn" data-card="card-2">Click to
+                                                    rotate
+                                                    back</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Rotating card -->
+                            <div class="card-wrapper">
+                                <div id="card-3" class="card card-rotating text-center">
+                                    <!-- Front Side -->
+                                    <div class="face front">
+                                        <div class="card-up">
+                                            <img class="card-img-top" src="image1.png"
+                                                alt="Image with a photo of clouds.">
+                                        </div>
+                                        <div class="card-body">
+                                            <a class="rotate-btn" data-card="card-3">Click to
+                                                rotate</a>
+                                        </div>
+                                    </div>
+                                    <!-- Back Side -->
+                                    <div class="face back">
+                                        <div class="card-body">
+                                            <h4 class="font-weight-bold mb-0">Another cool project <br> <i>Languages
+                                                    used: HTML, CSS</i></h4>
+                                            <hr>
+                                            <p>
+                                                Comprehensive description.
+                                                <hr>
+                                                <a href="https://github.com/l-tsipenyuk/Noa-Kirel"
+                                                    class="btn btn-outline-dark">Explore
+                                                    on
+                                                    GitHub</a><br>
+                                                <a class="rotate-btn" data-card="card-3">Click to
+                                                    rotate
+                                                    back</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
