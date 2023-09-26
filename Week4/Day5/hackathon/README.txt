@@ -4,10 +4,15 @@
 Python-based command-line tool that allows users to track and analyze energy generation data from an open database. The tool should use Object-Oriented Programming principles to structure the code effectively and implement the following features:
 
 1. **Data Retrieval:** Download and work with data from Excel database.
+Data Source: https://www.energyinst.org/statistical-review/resources-and-data-downloads
 
 2. **Data Analysis:** There will be various functionalities to analyze the renewable generation data by country. Users can input specific queries:
 
    - User inputs a country and receives historical energy production data categorized by source from the oldest available date to the most recent.
+   - Users can save the fetched data for a specific country in a PostgreSQL database.
+
+
+
    - User specifies a country and selects "renewable," obtaining the generation breakdown exclusively for renewables, spanning from the earliest available data to the most recent.
    - User inputs a country, a year, a generation source, and selects "peers," resulting in the identification of five countries closest in generation source share to the desired country for the specified year.
    - User inputs a country and selects "renewables," yielding three rows of data showcasing the year-over-year change in renewable energy generation (in %) within the country, its region, and globally.

@@ -1,10 +1,11 @@
 import openpyxl 
 import os 
 import pandas as pd
+import psycopg2
+import psycopg2.extras
 
+# access to data in Excel:
 dir_path = os.path.dirname(os.path.realpath(__file__))
-
-# access to data:
 wb = openpyxl.load_workbook(dir_path + r"\\energy_data.xlsx", "r")
 
 ws_hydro = wb['Hydro Generation - TWh']
@@ -79,14 +80,41 @@ class EnergyData:
         df.reset_index(drop=True)
         return df.T
 
-    
+    def connect_to_postgress(self):
+        DB_NAME = "energy_mix"
+        USER = "postgres"
+        PASSWORD = "root"
+        HOST = "localhost"
+        PORT = "5432" 
+
+        try:
+            connection = psycopg2.connect(
+                dbname = DB_NAME, 
+                user = USER,
+                password = PASSWORD,
+                host = HOST,
+                port = PORT
+            )
+        except Exception as e:
+            print(f"Error: {e}")
+
+        cursor = connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    def create_a_table(self, table_name: str):
+            self.connect_to_postgress()
+            query = f'''
+                create table if not exists {table_name} (
+                    fuel_type varchar(20) primary key,
+                    {', '.join([f'"{year}" numeric' for year in date])}
+                );
+                '''
+            cursor.execute(query) 
+            connection.commit()
 
 
 
-
-
-
-
-
+a = EnergyData('France')
+# a.connect_to_postgress()
+a.create_a_table('energy_mix')
 
 
