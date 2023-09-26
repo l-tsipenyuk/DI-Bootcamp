@@ -116,3 +116,52 @@ class MenuManager():
 # print(new_output)
 
 # print(out)
+
+
+
+def get_the_peer(self, country, year, fuel_type):
+    total_gen_data = {}
+    fuel_type_gen_data = {}
+
+    year_column_total = None
+    for col_index, cell in enumerate(ws_total[3]):
+        if cell.value == year:
+            year_column_total = col_index + 1  
+            break
+
+    year_column_hydro = None
+    for col_index, cell in enumerate(ws_hydro[3]):
+        if cell.value == year:
+            year_column_hydro = col_index + 1  
+            break
+
+    if year_column_total is not None and year_column_hydro is not None:
+        for row_total, row_hydro in zip(
+            ws_total.iter_rows(min_row=4, max_row=109, min_col=year_column_total, max_col=year_column_total),
+            ws_hydro.iter_rows(min_row=4, max_row=109, min_col=year_column_hydro, max_col=year_column_hydro)
+        ):
+            country_cell_total = row_total[0]
+            country_cell_hydro = row_hydro[0]
+            total_gen = country_cell_total.value
+            fuel_gen = country_cell_hydro.value
+
+            if total_gen is not None and fuel_gen is not None:
+                total_gen_data[country_cell_total.value] = total_gen
+                fuel_type_gen_data[country_cell_hydro.value] = fuel_gen
+
+    share_data = {}
+    for country in total_gen_data:
+        total_gen = total_gen_data[country]
+        fuel_type_gen = fuel_type_gen_data.get(country, 0)
+
+        if total_gen is not None and total_gen != 0:
+            share_data[country] = (fuel_type_gen / total_gen) * 100
+
+    country_share = share_data.get(self.country, 0)
+    sorted_countries = sorted(share_data.items(), key=lambda x: abs(x[1] - country_share))
+    result = sorted_countries[:5]
+
+    for country, share in result:
+        print(f"Country: {country}, Share: {share:.2f}%")
+
+
