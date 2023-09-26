@@ -105,6 +105,7 @@ class EnergyData:
         cursor = connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
     def create_a_table(self, table_name: str, start_year, end_year):
+        try:
             self.connect_to_postgress()
             date = list(range(start_year, end_year+1))
             query = f'''
@@ -115,31 +116,53 @@ class EnergyData:
                 '''
             cursor.execute(query) 
             connection.commit()
+            return f"The table {table_name} is created."
+        except Exception as e:
+            None
+
 
     def add_data_to_a_table(self, table_name: str, start_year, end_year):
-        self.connect_to_postgress()
-        date = list(range(start_year, end_year+1))
-        data = self.histdata(start_year, end_year)
-        
-        all_values = []
+        try:
+            self.connect_to_postgress()
+            date = list(range(start_year, end_year+1))
+            data = self.histdata(start_year, end_year)
+            
+            all_values = []
 
-        for fuel_type, row in data.iterrows():
-            values = list(row)
-            all_values.append((fuel_type, values))
+            for fuel_type, row in data.iterrows():
+                values = list(row)
+                all_values.append((fuel_type, values))
 
-        query = f'''
-            insert into {table_name} (fuel_type, {', '.join([f'"{year}"' for year in date])})
-            values
-            {', '.join([f"('{fuel_type}', {', '.join([str(v) for v in values])})" for fuel_type, values in all_values])};
-        '''
+            query = f'''
+                insert into {table_name} (fuel_type, {', '.join([f'"{year}"' for year in date])})
+                values
+                {', '.join([f"('{fuel_type}', {', '.join([str(v) for v in values])})" for fuel_type, values in all_values])};
+            '''
 
-        cursor.execute(query) 
-        connection.commit()
+            cursor.execute(query) 
+            connection.commit()
+            return f"The data is added into {table_name}."
+        except Exception as e:
+            None
+    
+    def delete_the_table(self, table_name: str):
+        try:
+            self.connect_to_postgress()
+            query = f'''
+                drop table {table_name};
+            '''
+
+            cursor.execute(query) 
+            connection.commit()
+            return f"The table {table_name} is deleted."
+        except Exception as e:
+            None
 
 
 
 a = EnergyData('Germany')
 # a.connect_to_postgress()
-# a.create_a_table('energy_mix_ger', 2015, 2022)
-a.add_data_to_a_table('energy_mix_ger', 2015, 2022)
+# print(a.create_a_table('energy_mix_ger', 2015, 2022))
+# print(a.add_data_to_a_table('energy_mix_ger', 2015, 2022))
+print(a.delete_the_table('energy_mix_ger'))
 
