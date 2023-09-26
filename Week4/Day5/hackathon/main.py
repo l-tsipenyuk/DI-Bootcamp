@@ -66,7 +66,7 @@ class EnergyData:
         gas_values = self.fetch_data85(ws_gas, start_year, end_year)[0]
         coal_values = self.fetch_data85(ws_coal, start_year, end_year)[0]
         other_values = self.fetch_data85(ws_other, start_year, end_year)[0]
-
+        
         date = list(range(start_year, end_year+1))
         fuelmix = ["Hydro", "Renewables", "Nuclear", "Oil", "Gas", "Coal", "Other"]
 
@@ -80,6 +80,8 @@ class EnergyData:
         df.reset_index(drop=True)
         return df.T
 
+    #methods to work with SQL Postgress
+
     def connect_to_postgress(self):
         DB_NAME = "energy_mix"
         USER = "postgres"
@@ -88,6 +90,7 @@ class EnergyData:
         PORT = "5432" 
 
         try:
+            global connection
             connection = psycopg2.connect(
                 dbname = DB_NAME, 
                 user = USER,
@@ -97,11 +100,13 @@ class EnergyData:
             )
         except Exception as e:
             print(f"Error: {e}")
-
+        
+        global cursor
         cursor = connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
-    def create_a_table(self, table_name: str):
+    def create_a_table(self, table_name: str, start_year, end_year):
             self.connect_to_postgress()
+            date = list(range(start_year, end_year+1))
             query = f'''
                 create table if not exists {table_name} (
                     fuel_type varchar(20) primary key,
@@ -111,10 +116,30 @@ class EnergyData:
             cursor.execute(query) 
             connection.commit()
 
+    def add_data_to_a_table(self, table_name: str, start_year, end_year):
+        self.connect_to_postgress()
+        date = list(range(start_year, end_year+1))
+        data = self.histdata(start_year, end_year)
+        
+        all_values = []
+
+        for fuel_type, row in data.iterrows():
+            values = list(row)
+            all_values.append((fuel_type, values))
+
+        query = f'''
+            insert into {table_name} (fuel_type, {', '.join([f'"{year}"' for year in date])})
+            values
+            {', '.join([f"('{fuel_type}', {', '.join([str(v) for v in values])})" for fuel_type, values in all_values])};
+        '''
+
+        cursor.execute(query) 
+        connection.commit()
 
 
-a = EnergyData('France')
+
+a = EnergyData('Germany')
 # a.connect_to_postgress()
-a.create_a_table('energy_mix')
-
+# a.create_a_table('energy_mix_ger', 2015, 2022)
+a.add_data_to_a_table('energy_mix_ger', 2015, 2022)
 
