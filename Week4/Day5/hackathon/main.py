@@ -29,6 +29,7 @@ class EnergyData:
                 return True 
         return False  
 
+    #methods to collect the generation mix from various spreadsheets
 
     def fetch_data65(self, worksheet, start_year, end_year):
         values65 = []
@@ -120,7 +121,6 @@ class EnergyData:
         except Exception as e:
             None
 
-
     def add_data_to_a_table(self, table_name: str, start_year, end_year):
         try:
             self.connect_to_postgresql()
@@ -158,9 +158,19 @@ class EnergyData:
         except Exception as e:
             None
 
+# method to get the generation mix in percentage for a specific country 
+
+    def get_the_share(self, country, year):
+        table = self.histdata(year, year)
+        total_sum = table[year].sum()
+        table['Share, %'] = ((table[year]/ total_sum) * 100).round(1)
+        table = table.sort_values(by='Share, %', ascending = False)
+        return table
+ 
 
 
 a = EnergyData('Germany')
+print(a.get_the_share('Germany', 1995))
 # a.connect_to_postgress()
 # print(a.create_a_table('energy_mix_ger', 2015, 2022))
 # print(a.add_data_to_a_table('energy_mix_ger', 2015, 2022))

@@ -6,10 +6,10 @@ Python-based command-line tool that allows users to track and analyze energy gen
 1. **Data Retrieval:** Download and work with data from Excel database.
 Data Source: https://www.energyinst.org/statistical-review/resources-and-data-downloads
 
-2. **Data Analysis:** There will be various functionalities to analyze the renewable generation data by country. Users can input specific queries:
+2. **Data Analysis:** There are various functionalities to analyze the electricity generation data by country. Users can input specific queries:
 
    - User inputs a country and receives historical energy production data categorized by source from the oldest available date to the most recent.
-   - Users can save the fetched data for a specific country in a PostgreSQL database.
+   - Users can save the fetched data for a specific country in a PostgreSQL database (options available: create a table, fill in the data and delete the table in the database).
 
 
 
