@@ -82,7 +82,7 @@ class EnergyData:
 
     #methods to work with SQL Postgress
 
-    def connect_to_postgress(self):
+    def connect_to_postgresql(self):
         DB_NAME = "energy_mix"
         USER = "postgres"
         PASSWORD = "root"
@@ -106,7 +106,7 @@ class EnergyData:
 
     def create_a_table(self, table_name: str, start_year, end_year):
         try:
-            self.connect_to_postgress()
+            self.connect_to_postgresql()
             date = list(range(start_year, end_year+1))
             query = f'''
                 create table if not exists {table_name} (
@@ -123,7 +123,7 @@ class EnergyData:
 
     def add_data_to_a_table(self, table_name: str, start_year, end_year):
         try:
-            self.connect_to_postgress()
+            self.connect_to_postgresql()
             date = list(range(start_year, end_year+1))
             data = self.histdata(start_year, end_year)
             
@@ -147,7 +147,7 @@ class EnergyData:
     
     def delete_the_table(self, table_name: str):
         try:
-            self.connect_to_postgress()
+            self.connect_to_postgresql()
             query = f'''
                 drop table {table_name};
             '''
@@ -164,5 +164,5 @@ a = EnergyData('Germany')
 # a.connect_to_postgress()
 # print(a.create_a_table('energy_mix_ger', 2015, 2022))
 # print(a.add_data_to_a_table('energy_mix_ger', 2015, 2022))
-print(a.delete_the_table('energy_mix_ger'))
+# print(a.delete_the_table('energy_mix_ger'))
 
