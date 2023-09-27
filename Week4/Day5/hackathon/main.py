@@ -257,8 +257,10 @@ for country in country_list[1:]:
     result = pd.merge(result, table[country], left_index=True, right_index=True)
 
 result = result.reset_index()
+sorted_result = result.sort_values(by= 'Hydro', axis=1)
+short_sorted = sorted_result.iloc[: [0,1]]
 
-print(result)
+print(short_sorted)
 
 
 
