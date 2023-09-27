@@ -1,8 +1,8 @@
 from main import EnergyData
 
 def getting_started():
-    user_input = input("Welcome to BP Energy data tool. Please choose an action (typing the first letter of it):\n View a country's electricity generation mix over time (V)\n  Get the generation mix in % (G)\n Add the country's energy mix to PostgreSQL db(A)\n Exit\n")
-    if user_input == "V":
+    user_input = input("Welcome to BP Energy data tool. Please choose an action (typing the bullet letter):\na) View a country's electricity generation mix over time \nb) Get the generation mix in percentage for one country \nc)Get the generation mix in percentage for several countries \nd) Export the country's energy mix historical data to Excel \ne) Export the country's energy mix to PostgreSQL db \nExit \n")
+    if user_input == "a":
 
         print("You can choose the country and the time range for the statistics.")
         country = input("Type in the country:\n")
@@ -14,7 +14,7 @@ def getting_started():
         else:
             return a.histdata(start_year, last_year)
 
-    if user_input == "G":
+    if user_input == "b":
         country = input("Type in the country:\n")
         start_year = int(input("Type in the year:\n"))
         last_year = start_year
@@ -30,8 +30,14 @@ def getting_started():
                 print(result)
             elif user_input_level3.lower() == "no":
                 break
-   
-    if user_input == "A":
+
+    if user_input == "c":
+        sdsd
+
+    if user_input == "d":
+        sdsd
+
+    if user_input == "e":
         user_input_level2 = input("Please choose what you want to do:\n Create a table in PostgreSQL (C) \n Fill in the data to an existing table in PostgreSQL (F) \n Delete the table in PostgreSQL (D)\n Go back to menu (Q)\n")
 
         if user_input_level2 == "C":

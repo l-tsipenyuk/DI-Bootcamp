@@ -1,8 +1,10 @@
 import openpyxl 
+from openpyxl import Workbook
 import os 
 import pandas as pd
 import psycopg2
 import psycopg2.extras
+
 
 # access to data in Excel:
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -82,6 +84,17 @@ class EnergyData:
         df.reset_index(drop=True)
         return df.T
 
+# method to export hist_data to excel
+
+    def export_to_excel(self, start_year, end_year, country):
+        data = self.histdata(start_year, end_year)
+        df = pd.DataFrame(data)
+        name = f"{country}.xlsx"
+        file_path = os.path.join(dir_path, name)
+        df.to_excel(file_path, index=True)
+        # print(df)
+
+
 # method to get the generation mix in percentage for a specific country 
 
     def get_the_share(self, country, year):
@@ -91,65 +104,24 @@ class EnergyData:
         table = table.sort_values(by='Share, %', ascending = False)
         return table
 
-# methods to get the peers WORK ON THIS
+# method to compare several countries' generation mix
 
-    def get_the_peer(self, country, year, fuel_type):
-        country_list = ["Canada", "Mexico", "US", "Argentina", "Brazil", "France", "Germany", "Italy", "Netherlands", "Poland", "Spain", "Turkey", "Ukraine", "United Kingdom", "Kazakhstan", "Russian Federation", "Iran", "Saudi Arabia", "United Arab Emirates", "Egypt", "Australia", "China", "India", "Indonesia", "Japan", "Malaysia", "South Korea", "Taiwan", "Thailand", "Vietnam"]
-        
-        for i in country_list:
-            a = EnergyData(i)
-            a.histdata(year,year)
-        # table2 = self.get_the_share(country_list, year)
-        # return 
- 
+    def compare_countries(self, year):
+                
+        country_list = input("Type in several countries separated by commas.\n").split(',')
+        country_list = [country.strip() for country in country_list]
+        table = {}  
 
+        for country in country_list:
+            a = EnergyData(country)
+            table[country] = a.get_the_share(country, year).rename(columns= {"Share, %": country}).drop([year], axis=1)
 
+        result = table[country_list[0]]
 
-        # total_gen_data = {}
-        # fuel_type_gen_data = {}
+        for country in country_list[1:]:
+            result = pd.merge(result, table[country], left_index=True, right_index=True)
 
-        # year_column_total = None
-        # for col_index, cell in enumerate(ws_total[3]):
-        #     if cell.value == year:
-        #         year_column_total = col_index + 1  
-        #         break
-
-        # year_column_hydro = None
-        # for col_index, cell in enumerate(ws_hydro[3]):
-        #     if cell.value == year:
-        #         year_column_hydro = col_index + 1  
-        #         break
-
-        # if year_column_total is not None and year_column_hydro is not None:
-        #     for row_total, row_hydro in zip(
-        #         ws_total.iter_rows(min_row=4, max_row=109, min_col=year_column_total, max_col=year_column_total),
-        #         ws_hydro.iter_rows(min_row=4, max_row=109, min_col=year_column_hydro, max_col=year_column_hydro)
-        #     ):
-        #         country_cell_total = row_total[0]
-        #         country_cell_hydro = row_hydro[0]
-        #         total_gen = country_cell_total.value
-        #         fuel_gen = country_cell_hydro.value
-
-        #         if total_gen is not None and fuel_gen is not None:
-        #             total_gen_data[country_cell_total.value] = total_gen
-        #             fuel_type_gen_data[country_cell_hydro.value] = fuel_gen
-
-        # share_data = {}
-        # for country in total_gen_data:
-        #     total_gen = total_gen_data[country]
-        #     fuel_type_gen = fuel_type_gen_data.get(country, 0)
-
-        #     if total_gen is not None and total_gen != 0:
-        #         share_data[country] = (fuel_type_gen / total_gen) * 100
-
-        # country_share = share_data.get(self.country, 0)
-        # sorted_countries = sorted(share_data.items(), key=lambda x: abs(x[1] - country_share))
-        # result = sorted_countries[:5]
-
-        # print(year_column_total)
-
-        # for country, share in result:
-        #     print(f"Country: {country}, Share, %: {share} ")
+        return result
 
 #methods to work with SQL Postgress
 
@@ -232,9 +204,11 @@ class EnergyData:
  
  
 
-# a = EnergyData('Germany')
+a = EnergyData('Germany')
 # print(a.get_the_share('Germany', 1995))
-# print(a.get_the_peer('Germany', 2022, 'Hydro'))
+# print(a.histdata(2021, 2022))
+# print(a.compare_countries(2020))
+a.export_to_excel(1985,2022, "Germany")
 # a.connect_to_postgress()
 # print(a.create_a_table('energy_mix_ger', 2015, 2022))
 # print(a.add_data_to_a_table('energy_mix_ger', 2015, 2022))
@@ -243,24 +217,15 @@ class EnergyData:
 
 
 
-# country_list = ["Germany", "France"]
-country_list = ["Canada", "Mexico", "US", "Argentina", "Brazil", "France", "Germany", "Italy", "Netherlands", "Poland", "Spain", "Turkey", "Ukraine", "United Kingdom", "Kazakhstan", "Russian Federation", "Iran", "Saudi Arabia", "United Arab Emirates", "Egypt", "Australia", "China", "India", "Indonesia", "Japan", "Malaysia", "South Korea", "Taiwan", "Thailand", "Vietnam"]
-table = {}  
 
-for country in country_list:
-    a = EnergyData(country)
-    table[country] = a.get_the_share(country, 2022).rename(columns= {"Share, %": country}).drop([2022], axis=1)
 
-result = table[country_list[0]]
 
-for country in country_list[1:]:
-    result = pd.merge(result, table[country], left_index=True, right_index=True)
 
-result = result.reset_index()
-sorted_result = result.sort_values(by= 'Hydro', axis=1)
-short_sorted = sorted_result.iloc[: [0,1]]
 
-print(short_sorted)
+
+
+
+
 
 
 
