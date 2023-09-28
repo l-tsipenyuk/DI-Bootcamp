@@ -7,30 +7,50 @@
 # Show the current task queue.
 # Use Python’s collections.deque for the queue implementation.
 
-from queue import PriorityQueue
+# import queue
+# from queue import PriorityQueue
 
-queue = PriorityQueue()
+# class Tasks:
+#     def __init__(self):
+#         self.task_queue = queue.PriorityQueue()
 
-class Tasks:
-    def __init__(self, name):
-        self.name = name
+#     def add_task(self, task_name, task_priority):
+#         self.task_queue.put((task_priority, task_name))
 
-    # def add_task(self, task_name, priority: int):
-    #     task = 
+#     def next_task(self):
+#         while not self.task_queue.empty():
+#             priority, task_name = self.task_queue.get()
+#             print("Priority:", priority)
+#             print("Item Name:", task_name)
+#             break
+#         else:
+#             print("There are no tasks left")
 
-task1 = Tasks("Do homework")
-task2 = Tasks("Clean room")
-task3 = Tasks("Go for a walk")
+# tasks = Tasks()
+# tasks.add_task("Do homework",1)
+# tasks.add_task("Clean room",2)
+# tasks.add_task("Go for a walk",3)
+# tasks.next_task()
+# tasks.next_task()
+# tasks.next_task()
+# tasks.next_task()
 
-object_to_name = {task1: task1.name, task2: task2.name, task3: task3.name}
 
-queue.put((3, task3))
-queue.put((2, task2))
-queue.put((1, task1))
+# Exercise 2: Palindrome Checker
+# Create a Python function to check if a given word or phrase is a palindrome using a queue. Ignore spaces and case sensitivity.
 
-priority, item = queue.get()
-# priority, item = queue.get()
-# priority, item = queue.get()
+# def palindrome_checker():
+#     user_input = str(input("Type the word:\n")).lower()
+#     input_list_original = list(user_input)
+#     input_list = list(user_input)
+#     input_list.reverse()
+#     if input_list == input_list_original:
+#         return True
+#     else:
+#         return False
 
-print("Priority:", priority)
-print("Item Name:", object_to_name[item])
+# print(palindrome_checker())
+
+# Exercise 3: Merge Two Sorted Linked Lists
+
+    
