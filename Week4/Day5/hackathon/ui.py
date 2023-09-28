@@ -1,3 +1,4 @@
+# check this! https://www.tutorialspoint.com/python/python_gui_programming.htm#:~:text=Tkinter%20is%20the%20standard%20GUI,to%20the%20Tk%20GUI%20toolkit.
 from main import EnergyData
 
 def getting_started():
