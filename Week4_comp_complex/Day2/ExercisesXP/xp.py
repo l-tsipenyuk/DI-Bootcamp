@@ -53,4 +53,38 @@
 
 # Exercise 3: Merge Two Sorted Linked Lists
 
-    
+# Part 1: Create The Node Class
+# Your first task is to create a Node class. This class should contain:
+
+# An __init__ method that initializes two attributes:
+# value, which holds the data the node will store.
+# next, which is a reference to the next node in the list. It should be initialized as None.
+
+
+# This class serves as the building block for creating your linked list.
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, value):
+        new_node = Node(value)
+        if not self.head:
+            self.head = new_node
+        else:
+            current_node = self.head
+            while current_node.next:
+                current_node = current_node.next
+            current_node.next = new_node
+
+list_ex = LinkedList()
+list_ex.append(3)
+list_ex.append(2)
+list_ex.append(1)
+
+print(list_ex)
