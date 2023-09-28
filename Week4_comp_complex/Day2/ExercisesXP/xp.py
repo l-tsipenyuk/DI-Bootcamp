@@ -83,61 +83,61 @@
 # If one list is exhausted, appends the remaining nodes from the other list to the new list.
 # The function should return the head of the new sorted linked list.
 
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+# class Node:
+#     def __init__(self, value):
+#         self.value = value
+#         self.next = None
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
 
-    def append(self, value):
-        new_node = Node(value)
-        if not self.head:
-            self.head = new_node
-        else:
-            current_node = self.head
-            while current_node.next:
-                current_node = current_node.next
-            current_node.next = new_node
+#     def append(self, value):
+#         new_node = Node(value)
+#         if not self.head:
+#             self.head = new_node
+#         else:
+#             current_node = self.head
+#             while current_node.next:
+#                 current_node = current_node.next
+#             current_node.next = new_node
     
-def merge_sorted_linked_lists(list_1, list_2):
-    merged_list = LinkedList()
-    current1 = list_1.head
-    current2 = list_2.head
+# def merge_sorted_linked_lists(list_1, list_2):
+#     merged_list = LinkedList()
+#     current1 = list_1.head
+#     current2 = list_2.head
 
-    while current1 is not None and current2 is not None:
-        if current1.value < current2.value:
-            merged_list.append(current1.value)
-            current1 = current1.next
-        else:
-            merged_list.append(current2.value)
-            current2 = current2.next
+#     while current1 is not None and current2 is not None:
+#         if current1.value < current2.value:
+#             merged_list.append(current1.value)
+#             current1 = current1.next
+#         else:
+#             merged_list.append(current2.value)
+#             current2 = current2.next
 
-        while current1 is not None:
-            merged_list.append(current1.value)
-            current1 = current1.next
-        while current2 is not None:
-            merged_list.append(current2.value)
-            current2 = current2.next
+#         while current1 is not None:
+#             merged_list.append(current1.value)
+#             current1 = current1.next
+#         while current2 is not None:
+#             merged_list.append(current2.value)
+#             current2 = current2.next
 
-        return merged_list
+#         return merged_list
 
-list_1 = LinkedList()
-list_1.append(3)
-list_1.append(2)
-list_1.append(1)
+# list_1 = LinkedList()
+# list_1.append(3)
+# list_1.append(2)
+# list_1.append(1)
 
-list_2 = LinkedList()
-list_2.append(6)
-list_2.append(5)
-list_2.append(4)
+# list_2 = LinkedList()
+# list_2.append(6)
+# list_2.append(5)
+# list_2.append(4)
 
-merged = merge_sorted_linked_lists(list_1, list_2)
+# merged = merge_sorted_linked_lists(list_1, list_2)
 
-current = merged.head
-while current:
-    print(current.value, end = " ")
-    current = current.next
+# current = merged.head
+# while current:
+#     print(current.value, end = " ")
+#     current = current.next
 
