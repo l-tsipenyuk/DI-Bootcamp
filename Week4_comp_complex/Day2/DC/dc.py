@@ -23,3 +23,27 @@
 # You are given a string s. Your task is to find the length of the longest substring without repeating characters. A substring is a contiguous sequence of characters within a string.
 
 # Write a function to accomplish this task with an efficient time complexity.
+
+# def longest_unique_substring(s):
+#     longest_str = ""
+#     current_str = ""
+#     start = 0
+
+#     for i in range(len(s)):
+#         if s[i] not in current_str:
+#             current_str += s[i]
+#         else:
+#             start = s.index(s[i], start) + 1
+#             current_str = s[start:i + 1]
+    
+#         if len(current_str) > len(longest_str):
+#             longest_str = current_str
+    
+#     return longest_str
+
+# s = "abcabcbb"
+# # s = "pwwkew"
+# # s = "bbbbb"
+# result = longest_unique_substring(s)
+# length = len(longest_unique_substring(s))
+# print(f"The answer is '{result}', with the length of {length}.")
