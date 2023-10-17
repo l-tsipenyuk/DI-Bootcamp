@@ -69,3 +69,9 @@ import numpy as np
 # float64_max = np.finfo('float64').max
 # print(f"This command prints the minimum and maximum representable values for the specified data types, i.e. minimum for int8 is {int8_min}.")
 
+# 14. How to convert a float (32 bits) array into an integer (32 bits) in place? Use np.ndarray.astype.
+# arr = np.array([1., 2., 3.])
+# int_array = arr.astype('int32')
+# print(int_array)
+
+# 15. Subtract the mean* of each row of a matrix. Use np.mean with axis=1.
