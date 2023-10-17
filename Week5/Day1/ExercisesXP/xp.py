@@ -88,5 +88,15 @@ import numpy as np
 # matrix_sort = matrix[sorted_index]
 # print(matrix_sort)
 
+# 17.How to swap two rows of an array? You can do this using array indexing.
+# arr = np.arange(0,9)
+# matrix = np.reshape(arr, (3,3))
+# matrix[[0, 2]] = matrix[[2, 0]]
+# print(matrix)
 
+# 18. Given an array C that is a bincount*, how to produce an array A such that np.bincount(A) == C? Use np.repeat.
 
+# C = np.array([1, 0, 2, 0, 0, 1, 1])
+# A = np.repeat(np.arange(len(C)), C)
+# count = np.bincount(A)
+# print(A, count)
