@@ -75,3 +75,18 @@ import numpy as np
 # print(int_array)
 
 # 15. Subtract the mean* of each row of a matrix. Use np.mean with axis=1.
+# arr = np.arange(1,4)
+# matrix = np.tile(arr, (3,1))
+# row_means = np.mean(matrix, axis=1)
+# new_matrix = matrix - row_means
+# print(new_matrix)
+
+# 16. How to sort an array by the nth column? Use np.argsort.
+# arr = np.arange(0,9)
+# matrix = np.reshape(arr, (3,3))
+# sorted_index = np.argsort(matrix[:,1])
+# matrix_sort = matrix[sorted_index]
+# print(matrix_sort)
+
+
+
