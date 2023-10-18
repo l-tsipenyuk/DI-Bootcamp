@@ -100,3 +100,4 @@ import numpy as np
 # A = np.repeat(np.arange(len(C)), C)
 # count = np.bincount(A)
 # print(A, count)
+
