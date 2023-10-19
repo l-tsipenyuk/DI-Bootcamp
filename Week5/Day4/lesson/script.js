@@ -237,11 +237,152 @@
 // }
 
 // Exercise 4 (keyless car)
-let userAnswer = prompt("How old are you?")
-if (userAnswer == 18){
-    alert("Congratulations on your first year of driving. Enjoy the ride!")
-}else if (userAnswer > 18){
-    alert("Powering On. Enjoy the ride!")
-}else{
-    alert("Sorry, you are too young to drive this car.Powering off")
-}
+// let userAnswer = prompt("How old are you?")
+// if (userAnswer == 18){
+//     alert("Congratulations on your first year of driving. Enjoy the ride!")
+// }else if (userAnswer > 18){
+//     alert("Powering On. Enjoy the ride!")
+// }else{
+//     alert("Sorry, you are too young to drive this car.Powering off")
+// }
+
+// Switch Case Conditional
+
+// let fruit = 'Apples';
+// switch(fruit){
+//     case 'Oranges':
+//         console.log("Oranges are 59 cents a pound.");
+//         break;
+//     case 'Mangoes':
+//     case 'Papayas':
+//         console.log("Mangoes and papayas are 2.79 USD a pound.");
+//         break;
+//     default:
+//         console.log(`Sorry we are run out of ${fruit}`);
+// }
+
+// // alternative for the same:
+// if (fruit == "Oranges"){
+//     console.log("Oranges are 59 cents a pound.");
+// }else if(fruit == "Mangoes" || fruit == "Papayas"){
+//     console.log("Mangoes and papayas are 2.79 USD a pound.");
+// }else {
+//     console.log(`Sorry we are run out of ${fruit}`);
+// }
+
+// let a = 2 + 2;
+
+// switch (a) {
+//     case 4:
+//         alert('Right!');
+//         break;
+
+//     case 3: // (*) grouped two cases
+//     case 5:
+//         alert('Wrong!');
+//         alert("Why don't you take a math class?");
+//         break;
+
+//     default:
+//         alert('The result is strange. Really.');
+// }
+
+// Loops
+// for (let i = 0; i < 10; i++) {
+// console.log(`The curent number/position in the loop is ${i}`)
+// }
+
+// loop through array
+// let arr = [1, 2, 3, 4, 5, 6];
+// for (let i=0; i<arr.length;i++){
+//     console.log(arr[i]);
+// }
+
+// Exercise 5 (even/odd)
+// for (let i=0;i<16;i++){
+//     if (i % 2 === 0){
+//         console.log(`${i} is even`)
+//     }else{
+//         console.log(`${i} is odd`)
+//     }
+// }
+
+// Loop through an object: for IN
+// let person ={
+//     fname:"Daniel",
+//     lname:"Robin",
+//     age: "26",
+// };
+
+// for (let x in person){
+//     console.log(x);
+//     console.log(person[x]);
+// }
+
+// for of loop: mainly for arrays:
+// let colors = ['blue','yellow','pink', 'black'];
+// for(let i of colors){
+//     console.log(i);
+// }
+
+// While Loop
+// let n=6;
+// do {
+//     console.log(n);
+//     n++;
+// } while (n<5);
+
+// Break out of loop
+
+// for (let i=0; i<10; i++){
+//     console.log(`Before if statement: ${i}`);
+
+//     if (i === 3) {
+//         break;
+//     }
+//     console.log(`After if statement: ${i}`);
+// }
+
+// Continue
+// for (let i = 0; i < 10; i++) {
+//     if (i === 3 || i === 6) {
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+
+// Exercise 6 (loops)
+// let variables = ['blue', 2, 'pink', 42, 'Rudolph']
+// for (let i of variables) {
+//     if (typeof (i) != 'string') {
+//         continue;
+//     } else {
+//         if (i[0] !== i[0].toUpperCase()){
+//             i = i[0].toUpperCase()+i.slice(1)
+//         }
+//         console.log(i);
+//     }
+// }
+
+// for (let i of variables) {
+//     if (typeof (i) != 'string') {
+//         break;
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+// if (3>2){
+//     let x = 2;
+//     console.log(x);
+// }
+
+// console.log(x);
+
+// let x = 2;
+// console.log(x);
+// x = 5;
+// console.log(x);
+// const y = 3;
+// console.log(y);
