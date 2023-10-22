@@ -139,3 +139,58 @@ let shoppingList = ["banana", "orange", "apple", "orange"];
 // If the user doesn’t answer or if the answer is not a number, ask again.
 // The hotel costs $140 per night.The function should return the total price of the hotel.
 
+// function hotelCost() {
+//     while (true) {
+//         userAnswer = prompt("Insert number of nights:");
+
+//         if (userAnswer === null) {
+//             break;
+//         }
+
+//         let nightsNumber = parseInt(userAnswer);
+
+//         if (!isNaN(nightsNumber) && nightsNumber > 0) {
+//             cost = nightsNumber * 140;
+//             console.log(`The price will be ${cost} $.`);
+//             break;
+//         } else {
+//             console.log("Invalid input. Insert number of nights:");
+//         }
+//     }
+// }
+
+// hotelCost()
+
+// 4.2. Define a function called planeRideCost().
+// It should ask the user for their destination.
+// If the user doesn’t answer or if the answer is not a string, ask again.
+// The function should return a different price depending on the location.
+// “London”: 183$
+// “Paris” : 220$
+// All other destination: 300$
+
+function planeRideCost() {
+    while (true) {
+        userAnswer = prompt("What is your flight destination?");
+        if (userAnswer === null) {
+            break;
+        }
+        if (typeof userAnswer === 'string') {
+            if (userAnswer === 'London') {
+                console.log(`The flight price will be 183$.`);
+            } else if (userAnswer === 'Paris') {
+                console.log(`The flight price will be 220$.`);
+            } else if (userAnswer !== 'Paris' || iserAnswer !== 'London'){
+                console.log(`The flight price will be 300$.`)
+            } else {
+            console.log("Invalid input. Insert the destination:");
+        }
+        break;
+    }
+}
+}
+planeRideCost()
+
+
+
+
