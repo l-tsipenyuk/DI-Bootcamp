@@ -53,7 +53,7 @@
 // }
 
 // let girlInfo = userInfo("Sarah", 22);
-// console.log(girlInfo); 
+// console.log(girlInfo);
 
 // function calculate(x,y){
 //     return x + y;
@@ -127,3 +127,96 @@
 
 // person.eat();
 
+// DOM - Document Object Model
+// const header = document.querySelector("h1");
+// console.log(header);
+
+// const list = document.querySelector("ul");
+// console.log(list.firstElementChild);
+// console.log(list.lastElementChild);
+// console.log(list.parentNode);
+// console.log(list.innerHTML);
+
+// const list = document.querySelectorAll("ul");
+// for(let i of list){
+//     console.log(i)
+// }
+// console.log(list[0]);
+
+// const secondlist = document.getElementById("secondlist");
+// console.log(secondlist);
+
+// const myHeader = document.querySelector("#myHeader");
+// console.log(myHeader.textContent);
+
+// // Creating, adding, deleting DOM nodes
+// const container = document.getElementById("container");
+// const newHeader = document.createElement("h2");
+// // const newTextNode = document.createTextNode("Hi I'm a new h2");
+// // newHeader.append(newTextNode);
+// newHeader.textContent = "Hello I'm a new header";
+
+// container.append(newHeader);
+// // remove child element --> pass the child element
+// container.removeChild(newHeader);
+// // remove element
+// container.remove();
+
+
+
+// EXERCISE - FOR ANOTHER HTML
+
+// how to access div:
+// way1:
+// const div = document.querySelector("div");
+// console.log(div);
+// // way2:
+// const container = document.getElementById("container");
+// console.log(container);
+
+// how to access ul nodes:
+// const list = document.querySelectorAll("ul.list");
+// for(let i of list){
+//     console.log(i.textContent)
+// }
+
+// or
+
+// const ulElements = document.getElementsByClassName("list");
+// for(let ulElement of ulElements){
+//     const liElements=ulElement.getElementsByTagName("li");
+//     for (const liElement of liElements){
+//         console.log(liElement.textContent);
+//     }
+// }
+
+// how to access the first list element of each list:
+// const list = document.querySelectorAll("list");
+// for (let ul of list){
+//     console.log(ul.firstElementChild)
+// }
+
+// Attributes
+// const div = document.getElementById("elem");
+// console.log(div.hasAttribute("id"))
+// console.log(div.id)
+
+// set and remove an attribute
+
+// div.setAttribute("style","color:blue;");
+// div.removeAttribute("style");
+
+// div.style.color = "red";
+// or
+// div.style = "color:red";
+
+// attributes exercise
+// const a = document.querySelector("#dI");
+// console.log(a.href);
+// console.log(a.type);
+// console.log(a.getAttribute("hreflang"));
+// a.className = "red";
+// a.classList.add("size", "red");
+// a.classList.replace("red","blue");
+// a.classList.remove("size");
+// a.classList.remove("red");
