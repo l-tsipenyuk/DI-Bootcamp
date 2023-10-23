@@ -1,0 +1,21 @@
+/* h1{
+    background-color: aquamarine;
+    border-radius: 6px;
+    display: none;
+} */
+
+/* for box */
+
+#parent{
+    width:350 px;
+    height: 350px;
+    border: 1px solid red;
+    position: relative;
+}
+
+#child{
+    width: 50px;
+    height:50px;
+    background-color: lightcoral;
+    position: absolute;
+}
