@@ -164,3 +164,20 @@
 // function mouseOut() {
 //     returnItemsToDefault();
 // }
+
+//  Exercice 4 : Volume Of A Sphere
+// Instructions
+// Write a JavaScript program to calculate the volume of a sphere.Use the code mentioned as a base.
+
+// const form = document.querySelector("form");
+// form.addEventListener("submit", getUserComments);
+// const radius = document.getElementById("radius");
+// const volume = document.getElementById("volume");
+
+// function getUserComments(e) {
+//     e.preventDefault();
+//     const radiusVal = radius.value;
+//     let volumeVal = volume.value;
+//     volumeVal = Math.pow(radiusVal,3) * Math.PI * 4/3;
+//     volume.value = volumeVal;
+// }
