@@ -8,13 +8,13 @@
 // 2. In your Javascript file, using setTimeout, call a function after 2 seconds.
 // The function will add a new paragraph < p > Hello World</p > to the < div id = "container" >.
 
-let id = setTimeout(function () {
-    const container = document.getElementById("container");
-    const newP = document.createElement("p");
-    const textNode = document.createTextNode("Hello World");
-    newP.appendChild(textNode);
-    container.appendChild(newP);
-}, 2000);
+// let id = setTimeout(function () {
+//     const container = document.getElementById("container");
+//     const newP = document.createElement("p");
+//     const textNode = document.createTextNode("Hello World");
+//     newP.appendChild(textNode);
+//     container.appendChild(newP);
+// }, 2000);
 
 // 3. In your Javascript file, using setInterval, call a function every 2 seconds.
 // The function will add a new paragraph < p > Hello World</p > to the < div id = "container" >.
@@ -22,64 +22,42 @@ let id = setTimeout(function () {
 // Instead of clicking on the button, the interval will be cleared(ie.clearInterval) as soon as there will be 5 paragraphs inside the < div id = "container" >.
 
 
-
+// let pos = 0;
 // function newParagraph() {
-//     let pos = 0;
-//     const id = setInterval(function () {
-//         if (pos < 5) {
-//             pos++;
-//             const container = document.getElementById("container");
-//             const newP = document.createElement("p");
-//             const textNode = document.createTextNode("Hello World");
-//             newP.appendChild(textNode);
-//             container.appendChild(newP);
-//         } else {
+//     if (pos < 5) {
+//         const container = document.getElementById("container");
+//         const newP = document.createElement("p");
+//         const textNode = document.createTextNode("Hello World");
+//         newP.appendChild(textNode);
+//         container.appendChild(newP);
+//         pos++;
+//         setTimeout(newParagraph, 2000);
+//     }
+// }
+
+// newParagraph();
+
+// Exercise 2 : Move The Box
+// Copy the code above, to a structured HTML file.
+// In your Javascript file, use setInterval to move the < div id = "animate" > to the right side of the < div id = "container" >, when the button is clicked on.
+
+// let animate = document.getElementById("animate");
+// let position = 0;
+// function myMove() {
+//     let id = setInterval(function () {
+//         if (position == 350) {
 //             clearInterval(id);
+//         } else {
+//             position += 1;
+//             animate.style.left = position + "px";
 //         }
-//     }, 2000);
+//     }, 10);
 // }
 
 
-function newParagraph() {
-    let pos = 0;
-    const container = document.getElementById("container");
-    const ul = document.createElement("ul");
-    const intervalId = setInterval(function () {
-        if (pos < 5) {
-            pos++;
-            const li = document.createElement("li");
-            // const container = document.getElementById("container");
-            // const newP = document.createElement("li");
-            const textNode = document.createTextNode("Hello World");
-            li.appendChild(textNode);
-            ul.appendChild(li);
-        } else {
-            clearInterval(intervalId);
-        }
-    }, 2000);
-    container.appendChild(ul);
-}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-//     let id = setInterval(function () {
-//         if (pos == 350) {
-//             clearInterval(id);
-//         }
-//         else {
-//             pos++;
-//             elem.style.top = pos + "px";
-//             elem.style.left = pos + "px";
-//         }
-//     }, 5);
