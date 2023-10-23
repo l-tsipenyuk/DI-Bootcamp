@@ -1,0 +1,19 @@
+#parent {
+  width: 350px;
+  height: 350px;
+  border: 1px solid red;
+  position: relative;
+}
+
+#child {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+}
+#alsoChild {
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+  position: absolute;
+}
