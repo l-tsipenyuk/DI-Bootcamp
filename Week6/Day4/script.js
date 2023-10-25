@@ -119,26 +119,74 @@
 // console.log(sum)
 
 // Example 5
-let party = [
-    {
-        desert: 'Chocolate Mousse',
-        calories: 30,
-    },
-    {
-        desert: 'Apple Pie',
-        calories: 15,
-    },
-    {
-        desert: 'Croissant',
-        calories: 50,
-    },
-    {
-        desert: 'Strawberry Icecream',
-        calories: 5,
-    },
-]
+// let party = [
+//     {
+//         desert: 'Chocolate Mousse',
+//         calories: 30,
+//     },
+//     {
+//         desert: 'Apple Pie',
+//         calories: 15,
+//     },
+//     {
+//         desert: 'Croissant',
+//         calories: 50,
+//     },
+//     {
+//         desert: 'Strawberry Icecream',
+//         calories: 5,
+//     },
+// ]
 
-let sum = party.reduce((acc, party.calories) =>{
-    return val
-})
-console.log(sum)
+// const totalCalories = party.reduce((acc,currentDesert) =>{
+//     // if (currentDesert.desert !== "Apple Pie"){
+//     //     return acc + currentDesert.calories
+//     // }
+//     // return acc
+
+//     // or in one line:
+
+//     return currentDesert.desert !== "Apple Pie" ? acc + currentDesert.calories : acc;
+// },0);
+
+// console.log(totalCalories);
+
+// Destructuring Assignment
+
+// let a,b,rest;
+// [a,b] = [10,20]
+// console.log(a)
+
+// Spread operator
+
+// let a = 10;
+// let b = 20;
+// let rest = [30, 40, 50];
+// const newArr = [a,b,rest];
+// const iterable = [a, b, ...rest];
+
+// console.log(iterable);
+// console.log(newArr);
+
+// const myString = "Nu vot takie vot dela";
+// const newString = [...myString];
+// console.log(newString);
+
+// Rest operator
+// let [c, d, ...rest] = [10, 20, 30, 40, 50];
+// console.log(c);
+// console.log(d);
+// console.log(rest);
+
+// Cloning Arrays
+// const rainbow = ['red', 'orange', 'yellow'];
+// const rainbowClone = rainbow;
+
+
+// // Now it's a reference - not an independent copy. To fix it:
+// const [...rainbowClone2] = rainbow;
+// rainbowClone.push("green");
+
+// console.log(rainbow);
+// // console.log(rainbowClone);
+// console.log(rainbowClone2);
