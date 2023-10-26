@@ -100,7 +100,7 @@ newDiv.appendChild(searchBar);
 
 const cardContainer = document.querySelector(".row");
 const noRobotsFound = document.createElement("div");
-noRobotsFound.innerHTML = "The item is not found";
+noRobotsFound.innerHTML = "The item is not found :(";
 noRobotsFound.style.color = "white";
 noRobotsFound.style.background = "purple";
 noRobotsFound.style.textAlign = "center";
