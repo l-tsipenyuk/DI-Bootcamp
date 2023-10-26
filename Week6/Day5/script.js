@@ -140,7 +140,7 @@ function displayRobots() {
 
 searchBar.addEventListener("input", displayRobots);
 
-// // cardContainer.style.background = "purple";
+
 
 
 
