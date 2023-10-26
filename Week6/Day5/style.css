@@ -24,9 +24,14 @@ body::before {
     font-family: 'Roboto', sans-serif;
 }
 
+.card-title{
+    text-align:center;
+    font-weight: bold;
+}
+
 .card-img-top {
     border-radius: 50%;
-    background-color: rgb(120, 120, 133);
+    background-color: rgb(107, 107, 166);
     size: 100px;
 }
 
@@ -38,22 +43,14 @@ body::before {
 }
 
 
-/* .card{
-    background-image: url(image1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.card{
     position: relative;
-    background-blend-mode: lighten;
-} */
+    background-image: url(image8.png);
+    background-size: cover;
+    background-position: no-repeat;
+} 
 
-/* .card-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #724bf0;
-    opacity: 0.6;
-    z-index: -1;
-} */
+
+
+
+ 

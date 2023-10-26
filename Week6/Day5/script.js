@@ -77,7 +77,7 @@ const cardTitle = document.querySelectorAll(".card-title");
 const cardText = document.querySelectorAll(".card-text");
 const cardImage = document.querySelectorAll(".card-img-top");
 
-for(let i = 0; i < cardTitle.length; i++){
+for (let i = 0; i < cardTitle.length; i++) {
     cardTitle[i].textContent = robots[i].name;
     cardText[i].textContent = robots[i].email;
     cardImage[i].src = robots[i].image;
@@ -99,11 +99,18 @@ newDiv.appendChild(searchBar);
 // function to display a card typed in search box
 
 const cardContainer = document.querySelector(".row");
+const noRobotsFound = document.createElement("div");
+noRobotsFound.innerHTML = "The item is not found";
+noRobotsFound.style.color = "white";
+noRobotsFound.style.background = "purple";
+noRobotsFound.style.textAlign = "center";
+noRobotsFound.style.fontSize = "50px";
 
 function displayRobots() {
-    
+
     cardContainer.innerHTML = '';
     const searchTerm = searchBar.value.toLowerCase();
+    let found = false;
 
     robots.forEach((robot) => {
         if (robot.name.toLowerCase().includes(searchTerm)) {
@@ -120,8 +127,20 @@ function displayRobots() {
             `;
 
             cardContainer.appendChild(card);
+            found = true;
         }
     });
+    if (!found){
+        cardContainer.style.background = "purple";
+        cardContainer.appendChild(noRobotsFound);
+    }else{
+        cardContainer.style.background = "";
+    }
 }
 
 searchBar.addEventListener("input", displayRobots);
+
+// // cardContainer.style.background = "purple";
+
+
+
