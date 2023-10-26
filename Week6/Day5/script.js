@@ -71,6 +71,8 @@ const robots = [
     }
 ];
 
+// adding card content from object to HTML
+
 const cardTitle = document.querySelectorAll(".card-title");
 const cardText = document.querySelectorAll(".card-text");
 const cardImage = document.querySelectorAll(".card-img-top");
@@ -80,6 +82,8 @@ for(let i = 0; i < cardTitle.length; i++){
     cardText[i].textContent = robots[i].email;
     cardImage[i].src = robots[i].image;
 };
+
+// adding search box to navbar
 
 const newDiv = document.createElement("div");
 newDiv.className = "search-box";
@@ -91,6 +95,8 @@ searchBar.placeholder = "Search Robots";
 const navBar = document.querySelector(".navbar");
 navBar.appendChild(newDiv);
 newDiv.appendChild(searchBar);
+
+// function to display a card typed in search box
 
 const cardContainer = document.querySelector(".row");
 
