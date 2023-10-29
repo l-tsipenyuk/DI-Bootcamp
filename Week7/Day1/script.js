@@ -117,18 +117,126 @@
 
 // console.log(newObj);
 
-let myCar = {
-    color: 'blue',
-    details: {
-        plateNumber: 123,
-        name: "Ford"
+// let myCar = {
+//     color: 'blue',
+//     details: {
+//         plateNumber: 123,
+//         name: "Ford"
+//     }
+// }
+
+// let copyCar = myCar;
+// copyCar.color = "red";
+// console.log(myCar);
+
+// let copyCar2 = {...myCar};
+// copyCar2.color = "red";
+// console.log(myCar);
+
+// Classes
+// class Rectangle {
+//     constructor(height, width) {
+//         this.height = height;
+//         this.width = width;
+//     }
+//     calcArea(){
+//         return this.height * this.width;
+//     }
+// }
+
+// const square1 = new Rectangle(10, 10);
+// const square2 = new Rectangle(20, 20);
+// console.log(square1.calcArea());
+// console.log(square2.calcArea());
+
+// Exercise 2
+// class Rabbit {
+//     constructor(type) {
+//         this.type = type;
+//     }
+//     speak(line) {
+//         console.log(`The ${this.type} rabbit says '${line}'`);
+//     }
+// }
+// let killerRabbit = new Rabbit("killer");
+// let blackRabbit = new Rabbit("black");
+// killerRabbit.speak("Hi");
+// blackRabbit.speak("Heh");
+// console.log(killerRabbit);
+
+// Setters and Getters
+// class Rectangle {
+//     constructor(height, width) {
+//         this.height = height;
+//         this.width = width;
+//     }
+//     // getter
+//     get area(){
+//         return this.height * this.width;
+//     }
+//     // setter
+//     set area(factor){
+//         this.width=this.height * factor;
+//     }
+// }
+
+// const square = new Rectangle(10,10);
+// square.area = 2;
+// console.log(square);
+// console.log(square.area);
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        console.log(`${this.name} makes a noise.`);
     }
 }
 
-let copyCar = myCar;
-copyCar.color = "red";
-console.log(myCar);
+// const newAnimal = new Animal("bob");
+// newAnimal.speak();
 
-let copyCar2 = {...myCar};
-copyCar2.color = "red";
-console.log(myCar);
+// class Dog extends Animal {
+//     constructor(name, noise) {
+//         super(name); // call the super class constructor and pass in the name parameter
+//         // Add a new property
+//         this.noise = noise;
+//     }
+//     speak(){
+//         console.log(`${this.name} barks. It says ${this.noise}`);
+//     }
+// }
+
+// let dog=new Dog("Mitzy", "Woof");
+// dog.speak();
+
+// Date Objects
+// defining Date obj
+let now = new Date();
+console.log(now);
+
+// toString
+// console.log(now.toString());
+
+// getDay
+console.log(now.getDay());
+let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+// console.log(dayNames[now.getDay()]);
+
+// getMonth
+console.log("getMonth", now.getMonth()+1);
+
+console.log('getDate', now.getDate())
+
+// get year
+console.log('getFullYear', now.getFullYear())
+
+// get hours
+console.log('getHours', now.getHours())
+
+date.addEvenlistener("change", function (event){
+    console.log(event.target.value);
+    let date = new Date(event.target.value);
+    console.log(date);
+});
