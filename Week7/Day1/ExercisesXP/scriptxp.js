@@ -139,3 +139,53 @@
 // console.log(object4.number) // 5 because number is set to be 5
 
 // 6.3. Create a class Animal with the attributes name, type and color.The type is the animal type, for example: dog, cat, dolphin ect …
+
+class Animal {
+    constructor(name, type, color) {
+        this.name = name;
+        this.type = type;
+        this.color = color;
+    }
+};
+
+// const animal1 = new Animal("Dori", "fish", "blue");
+// console.log(animal1);
+
+// 6.4. Create a class Mamal that extends from the Animal class. Inside the class, add a method called sound().This method takes a parameter: the sound the animal makes, and returns the details of the animal(name, type and color) as well as the sound it makes.
+
+class Mamal extends Animal {
+    constructor(name, type, color, sound) {
+        super(name, type, color);
+        this.sound = sound;
+    }
+    noise() {
+        console.log(`This is a ${this.type} called ${this.name} with a color of ${this.color}. It makes this sound: ${this.sound}.`)
+    }
+}
+
+// let animal2 = new Mamal("Wolt", "dog", "white", "woof");
+// animal2.noise();
+
+// 6.5. Create a farmerCow object that is an instance of the class Mamal. The object accepts a name, a type and a color and calls the sound method that “moos” her information.
+// For example: Moooo I'm a cow, named Lily and I'm brown and white
+
+// let farmerCow = {
+//     name: "Lily",
+//     type: "cow",
+//     color: "brown and white",
+//     sound: "mooo",
+// }
+// var arr = Object.values(farmerCow);
+// let animal3 = new Mamal(arr[0],arr[1],arr[2],arr[3]);
+
+// or:
+
+// let animal4 = new Mamal();
+// Object.values(farmerCow).forEach((value, index) => {
+//     index === 0 ? (animal4.name = value) :
+//         index === 1 ? (animal4.type = value) :
+//             index === 2 ? (animal4.color = value) :
+//                 animal4.sound = value;
+// });
+
+// animal4.noise();
