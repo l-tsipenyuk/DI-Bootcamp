@@ -46,17 +46,48 @@ const quotes = [
         id: 9,
         quote: "No bunny at all. ALWAYS NO BUNNY AT ALL!",
         author: "Chandler",
-    },
+    }
 ];
-
-function SelectQuote() {
-    let idQuote = Math.floor(Math.floor(Math.random()*10));
-    quoteRand = quotes[id=idQuote].quote;
-    authorRand = quotes[id = idQuote].author;
-    document.querySelector(".quote").textContent = quoteRand;
-    document.querySelector(".author").textContent = authorRand;
-}
 
 const element = document.getElementById("submitButton");
 element.addEventListener("click", SelectQuote);
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function SelectQuote() {
+    if (quotes.length === 0) {
+        return;
+    }
+
+    if (!quotes.shuffled) {
+        shuffleArray(quotes);
+        quotes.shuffled = true;
+    }
+
+    const quote = quotes.pop();
+    quoteRand = quote.quote;
+    authorRand = quote.author;
+
+    document.querySelector(".quote").textContent = quoteRand;
+    document.querySelector(".author").textContent = authorRand;
+};
+
+const form = document.getElementById("myform");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const newAuthor = form.querySelector('input[name="author"]').value;
+    const newQuote = form.querySelector('textarea[name="quote"]').value;
+    const newObj = {
+        id: quotes.length + 1,
+        quote: newQuote,
+        author: newAuthor,
+   };
+   quotes.push(newObj);
+   console.log(quotes);
+});

@@ -1,16 +1,25 @@
 *{
     background-color: rgb(211, 186, 154);
+    font-family: 'Poppins';
 }
 
 #container{
     background-color:bisque;
-    padding: 50px;
-    margin: 100px;
+    padding: 30px;
+    margin: 30px;
 
 }
 
 #header{
-    padding-top: 50px;
+    padding-top: 30px;
 }
-/* #submitButton{
-} */
+
+h1{
+    font-family: "Agbalumo";
+}
+
+#author{
+    font-size: 18px;
+    font-style: italic;
+    color: rgb(5, 66, 115);
+}

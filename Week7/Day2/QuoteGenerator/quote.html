@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Generator</title>
     <link rel="stylesheet" href="quote.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1 id ="header">Our favourite quotes from 'Friends'</h1>
-    <div id = "container">
-        <input type="submit" id = "submitButton" value="Generate Quote">
-        <h1 class = "quote">Cool Quote</h1>
-        <h2 class="author">Author</h2>
+    <h1 id="header">Our favourite quotes from 'Friends'</h1>
+    <div id="container">
+        <input type="submit" id="submitButton" value="Generate Quote">
+        <h2 class="quote">Here you'll see a quote.</h2>
+        <h2 class="author" id = "author">And here you'll see an author.</h2>
+
+        <h3>Add your quote:</h3>
+        <form id="myform" name="my" action="quote.html" method="POST">
+            <label for="author" id="author">Author:</label><br>
+            <input type="text" name="author" value=""> <br>
+            <label for="textarea">Quote:</label><br>
+            <textarea id="textarea" name="quote" rows="5" cols="80" style="resize: none;"></textarea><br>
+            <input type="submit" value="Add Quote">
+        </form>
     </div>
     <script src="quote.js"></script>
 </body>
+
 </html>
