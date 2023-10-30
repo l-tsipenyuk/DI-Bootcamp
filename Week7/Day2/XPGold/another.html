@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XP Gold Another</title>
+</head>
+
+<body>
+    <div id="firstnamefrom"></div>
+    <div id="lastnamefrom"></div>
+    <script>
+        const firstName = localStorage.getItem("firstName");
+        const lastName = localStorage.getItem("lastName");
+
+        if (firstName && lastName) {
+            document.getElementById("firstnamefrom").textContent = firstName;
+            document.getElementById("lastnamefrom").textContent = lastName;
+        }
+    </script>
+    <script src="xpgold.js"></script>
+</body>
+
+</html>
