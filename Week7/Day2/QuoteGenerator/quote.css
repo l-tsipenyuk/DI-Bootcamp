@@ -1,0 +1,16 @@
+*{
+    background-color: rgb(211, 186, 154);
+}
+
+#container{
+    background-color:bisque;
+    padding: 50px;
+    margin: 100px;
+
+}
+
+#header{
+    padding-top: 50px;
+}
+/* #submitButton{
+} */
