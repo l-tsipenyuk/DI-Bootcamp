@@ -42,3 +42,111 @@
 // this function converts the morse json string provided above to a morse javascript object.
 // if the morse javascript object is empty, throw an error(use reject)
 // else return the morse javascript object(use resolve)
+
+// 2.3.The second function called toMorse(morseJS), takes one argument: the new morse javascript object.
+// This function asks the user for a word or a sentence.
+// if the user entered a character that doesn’t exist in the new morse javascript object, throw an error. (use reject)
+// else return an array with the morse translation of the user’s word
+
+// 2.4. The third function called joinWords(morseTranslation), takes one argument: the morse translation array
+// this function joins the morse translation by using line break and display it on the page(ie.On the DOM)
+
+// const morse = `{
+//   "0": "-----",
+//   "1": ".----",
+//   "2": "..---",
+//   "3": "...--",
+//   "4": "....-",
+//   "5": ".....",
+//   "6": "-....",
+//   "7": "--...",
+//   "8": "---..",
+//   "9": "----.",
+//   "a": ".-",
+//   "b": "-...",
+//   "c": "-.-.",
+//   "d": "-..",
+//   "e": ".",
+//   "f": "..-.",
+//   "g": "--.",
+//   "h": "....",
+//   "i": "..",
+//   "j": ".---",
+//   "k": "-.-",
+//   "l": ".-..",
+//   "m": "--",
+//   "n": "-.",
+//   "o": "---",
+//   "p": ".--.",
+//   "q": "--.-",
+//   "r": ".-.",
+//   "s": "...",
+//   "t": "-",
+//   "u": "..-",
+//   "v": "...-",
+//   "w": ".--",
+//   "x": "-..-",
+//   "y": "-.--",
+//   "z": "--..",
+//   ".": ".-.-.-",
+//   ",": "--..--",
+//   "?": "..--..",
+//   "!": "-.-.--",
+//   "-": "-....-",
+//   "/": "-..-.",
+//   "@": ".--.-.",
+//   "(": "-.--.",
+//   ")": "-.--.-"
+// }`;
+
+// let morseCode = [];
+
+// function toJs() {
+//     return new Promise((resolve, reject) => {
+//         const morseJS = JSON.parse(morse);
+//         if (morseJS) {
+//             resolve(morseJS);
+//         } else {
+//             reject("The string is empty.");
+//         }
+//     });
+// }
+
+// function toMorse() {
+//     return new Promise((resolve, reject) => {
+//         toJs()
+//             .then(morseJS => {
+//                 let userAnswer = prompt("Enter your text:");
+//                 let userAnswerChar = userAnswer.split('');
+//                 if (userAnswerChar.every(char => morseJS.hasOwnProperty(char.toLowerCase()))) {
+//                     const morseCodes = userAnswerChar.map(char => morseJS[char.toLowerCase()]);
+//                     morseCode = morseCode.concat(morseCodes); 
+//                     resolve(morseCode);
+//                 } else {
+//                     reject("One of the elements you've entered is not valid.");
+//                 }
+//             })
+//             .catch(error => {
+//                 reject(error);
+//             });
+//     });
+// }
+
+// function joinWords(morseCode) {
+//     if (morseCode) {
+//         let morseCodeDOM = document.getElementById("morsecode");
+//         let newDiv = document.createElement("div");
+//         newDiv.textContent = `The Morse code for the word given is: '${morseCode.join(' ')}'.`;
+//         morseCodeDOM.appendChild(newDiv);
+//     } else {
+//         console.error("Morse code is undefined.");
+//     }
+// }
+
+// toMorse()
+//     .then(morseCode => {
+//         joinWords(morseCode);
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     });
