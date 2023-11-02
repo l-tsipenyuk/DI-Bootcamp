@@ -30,6 +30,7 @@ p {
 .currencies {
     background-color: rgba(125, 149, 98, 0.5);
     font-size: 20px;
+    width: 400px;
 }
 
 #btn {
@@ -53,4 +54,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 400px;
+    height: 25px;
 }

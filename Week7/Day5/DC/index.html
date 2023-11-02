@@ -18,20 +18,21 @@
         <div id="converter_box">
             <h1>Currency Converter</h1>
             <p>From: </p>
-            <select name="currencies" class="currencies">
-                <option value="volvo" id="option_currencies">Volvo</option>
+            <select name="currencies" class="currencies" id="from">
             </select>
-            <p>To: </p>
-            <select name="currencies" class="currencies">
+            <p>To:
+                <button id="btn2" type="button"><i class="fa-solid fa-shuffle"></i></button>
+            </p>
+            <select name="currencies" class="currencies" id="to">
             </select>
             <p>Amount: </p>
-            <!-- <label for="amount">First name:</label><br> -->
             <input type="text" id="amount" name="amount">
             <button id="btn" type="button">Convert</button>
-            <div id = "result">12</div>
+            <div id="result"></div>
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/ae389e438c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
