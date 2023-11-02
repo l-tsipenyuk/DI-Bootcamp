@@ -6,13 +6,14 @@ btn.addEventListener("click", function (e) {
 
     var isEmpty = searchBox.innerHTML === "";
     if (!isEmpty) {
-        searchBox.innerHTML = "";
-        let loadingDOM = document.createElement("i");
-        loadingDOM.className = "fa-solid fa-spinner fa-spin";
-        let loadingMessage = document.createElement("p");
-        loadingMessage.textContent = "Loading...";
-        searchBox.appendChild(loadingDOM);
-        searchBox.appendChild(loadingMessage);
+
+            searchBox.innerHTML = "";
+            let loadingDOM = document.createElement("i");
+            loadingDOM.className = "fa-solid fa-spinner fa-spin";
+            let loadingMessage = document.createElement("p");
+            loadingMessage.textContent = "Loading...";
+            searchBox.appendChild(loadingDOM);
+            searchBox.appendChild(loadingMessage);
 
         randomNumber = Math.floor(Math.random() * 83) + 1;
         const url = `https://www.swapi.tech/api/people/${randomNumber}`;
@@ -39,7 +40,8 @@ btn.addEventListener("click", function (e) {
                             throw new Error("The planet is not found.");
                         }
                     }).then((data2) => {
-                        const planet = data2.result.name;
+                        const planet = data2.result.properties.name;
+                        console.log(data2)
 
                         let nameDOM = document.createElement("h1");
                         let heightDOM = document.createElement("p");
@@ -55,14 +57,10 @@ btn.addEventListener("click", function (e) {
 
                         searchBox.removeChild(loadingDOM);
                         searchBox.removeChild(loadingMessage);
-                        searchBox.appendChild(nameDOM);
-                        searchBox.appendChild(heightDOM);
-                        searchBox.appendChild(genderDOM);
-                        searchBox.appendChild(birth_yearDOM);
-                        searchBox.appendChild(planetDOM);
+
+                        searchBox.append(nameDOM, heightDOM, genderDOM, birth_yearDOM, planetDOM);
 
                     })
-
 
             }).catch((err) => {
                 console.log(err);
