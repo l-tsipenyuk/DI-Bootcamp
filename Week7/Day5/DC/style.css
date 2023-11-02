@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(image3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Rubik';
+}
+
+#converter_box {
+    background-color: rgba(102, 64, 139, 0.5);
+    border-radius: 15px;
+    height: 500px;
+    width: 400px;
+    color: azure;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 30px;
+}
+
+.currencies {
+    background-color: rgba(125, 149, 98, 0.5);
+    font-size: 20px;
+}
+
+#btn {
+    background-color: rgba(125, 149, 98, 0.8);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#amount {
+    background-color: rgba(125, 149, 98, 0.8);
+    font-size: 20px;
+    border: none;
+}
+
+#result {
+    background-color: rgba(125, 149, 98, 0.4);
+    margin-top: 20px;
+    font-size: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
