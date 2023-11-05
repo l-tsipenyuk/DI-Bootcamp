@@ -8,19 +8,19 @@
 // 3.3. Create a file “Hello World.txt” containing the sentence “Hello World!! “
 // 3.4. Create a file “Bye World.txt” containing the sentence “Bye World!! “
 
-import fs from 'fs'
+// import fs from 'fs'
 
-function readFile(fileName){
-    fs.readFile(fileName,'utf-8', (err, data)=> {
-        if(err) console.log(err);
-        console.log(data);
-    })
-}
+// function readFile(fileName){
+//     fs.readFile(fileName,'utf-8', (err, data)=> {
+//         if(err) console.log(err);
+//         console.log(data);
+//     })
+// }
 
-function writeFile(textContent){
-    fs.writeFile('Bye World.txt', textContent, (err) => {
-        if (err) console.log(err);
-    })
-}
+// function writeFile(textContent){
+//     fs.writeFile('Bye World.txt', textContent, (err) => {
+//         if (err) console.log(err);
+//     })
+// }
 
-export {readFile, writeFile}
+// export {readFile, writeFile}
