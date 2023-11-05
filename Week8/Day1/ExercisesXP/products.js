@@ -2,8 +2,8 @@
 // Instructions
 // 1.1. Create a file named products.js.
 // 1.2. Inside products.js, create an array of objects, each representing a product with properties like name, price, and category.
-
 // 1.3. Export this array using the Common JS syntax.
+// 1.4. Create another file named shop.js.
 
 const newArr = [{
     name: "banana",
@@ -19,3 +19,5 @@ const newArr = [{
     category: "vegetable"
 }
 ]
+
+module.exports = newArr;
