@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenge</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <label for="emojis" id="choose">Choose the correct emoji name:</label>
+        <select id="emojis" name="emojis">
+            <option disabled selected value="" class="values"> -- choose your fighter -- </option>
+            <option class="values" id="1" value="val1">opt1</option>
+            <option class="values" id="2" value="val2">opt2</option>
+            <option class="values" id="3" value="val3">opt3</option>
+            <option class="values" id="4" value="val4">opt4</option>
+        </select><br>
+        <button type="button" id="result" disabled>Your result</button><br>
+        <button type="button" id="again">Let's try another one!</button>
+        <div id="scoreRight">Correct answers:</div>
+        <div id="scoreWrong">Wrong answers:</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
