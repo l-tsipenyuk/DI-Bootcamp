@@ -13,49 +13,25 @@ app.use("/api", quest_router);
 
 let userScore = 0;
 
-console.log("Start")
+const { questions } = require("../server/config/db.js");
 
-app.get("/api/test", (req, res) => {
-    console.log("req", req)
-    res.json({ message: "Wrong answer again" });
-})
-
-app.post("/api/test2/:id/submit", (req, res) => {
+app.post("/api/test/:id/submit", (req, res) => {
     const { id } = req.params;
     const { answer } = req.body;
     const question = questions.find((item) => item.id == id);
     if (answer === question.answer) {
         userScore++;
-        console.log("Catbug", userScore)
-        res.json({ message: "Correct answer!", userScore });
-
+        res.json({ message: "Correct answer!1", userScore });
     } 
-    // else {
-        // console.log("Catbug", userScore)
-        // res.json({ message: "Wrong answer." });
-        
-    // }
-    console.log("req", req.params, req.body, id, answer, question)
-    // res.json({ message: "Test2 submit" });
+    else {
+        res.json({ message: "Wrong answer.", userScore });
+    }
+    console.log("req", userScore)
 })
 
-app.post("/api/questions/:id/submit", (req, res) => {
-    console.log("Catbug0", userScore)
-    const { id } = req.params;
-    const { answer } = req.body;
-    const question = questions.find((item) => item.id == id);
-
-    if (!question) {
-        return res.status(404).json({ message: "Question not found" });
-    }
-
-    if (answer === question.answer) {
-        userScore++;
-        console.log("Catbug", userScore)
-        res.json({ message: "Correct answer!", userScore });
-    } else {
-        res.json({ message: "Wrong answer." });
-    }
+app.get("/api/test/score", (req, res) => { 
+    res.json({ message: "Fin", userScore });
+    console.log(userScore)
 });
 
 app.listen(process.env.PORT || 3001, () => {

@@ -48,12 +48,18 @@ next.addEventListener("click", async function (e) {
 
 async function getUserScore() {
     try {
-        const response = await fetch("http://localhost:3000/api/score");
+        const response = await fetch("http://localhost:3000/api/test/score");
 
         if (response.ok) {
             const data = await response.json();
-            const userScore = data.score;
-            console.log("User's score: " + userScore);
+            console.log(data)
+            const userScore = data.userScore;
+
+            container = document.getElementById("container");
+            newDiv = document.createElement("div");
+            newDiv.textContent = `Your score is ${userScore}/5.`;
+            container.appendChild(newDiv);
+            // console.log("User's score: " + userScore);
         } else {
             console.error("Failed to get user score.");
         }
@@ -68,7 +74,7 @@ submit.addEventListener("click", async (event) => {
     const answer = answerInput.value;
 
     try {
-        const response = await fetch(`http://localhost:3000/api/questions/${questionId}/submit`, {
+        const response = await fetch(`http://localhost:3000/api/test/${questionId}/submit`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
