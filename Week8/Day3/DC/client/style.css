@@ -1,0 +1,26 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background-image: url("https://windowscustomization.com/wp-content/uploads/2019/07/Skyrim-NIght-Stars.gif"); */
+    background-color: rgb(215, 189, 240);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Rubik';
+}
+
+#submit {
+    color: rgb(3, 6, 6);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Rubik';
+}
+
+#next {
+    color: rgb(3, 6, 6);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Rubik';
+}
