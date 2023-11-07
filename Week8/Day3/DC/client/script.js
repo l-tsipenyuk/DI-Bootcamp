@@ -59,7 +59,7 @@ async function getUserScore() {
             newDiv = document.createElement("div");
             newDiv.textContent = `Your score is ${userScore}/5.`;
             container.appendChild(newDiv);
-            // console.log("User's score: " + userScore);
+
         } else {
             console.error("Failed to get user score.");
         }
