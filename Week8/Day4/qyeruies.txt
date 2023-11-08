@@ -1,0 +1,12 @@
+Queries in elephant (online)
+
+create table products (
+id serial primary key,
+name varchar(255)  not null,
+price integer 
+)
+
+insert into products (name,price)
+values ('iPhone',800),
+('iPad', 700),
+('iWatch',600)
