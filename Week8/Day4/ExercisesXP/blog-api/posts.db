@@ -1,0 +1,12 @@
+-- create table posts (
+-- id serial primary key,
+-- title varchar(255)  not null,
+-- content varchar(255)  not null 
+-- )
+
+-- insert into posts (title,content)
+-- values ('Post1','How to code'),
+-- ('Post2', 'How to make a coffee'),
+-- ('Post3','The best TV Shows')
+
+select * from posts
