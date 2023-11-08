@@ -1,0 +1,12 @@
+-- create table users (
+-- id serial primary key,
+-- username varchar(255)  not null,
+-- password integer 
+-- )
+
+-- insert into users (username,password)
+-- values ('danaborisova',1243),
+-- ('noakirel', 7020),
+-- ('krasotka',692)
+
+select * from users
