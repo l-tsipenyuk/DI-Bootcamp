@@ -92,5 +92,4 @@ const updateUser = async (req, res) => {
     }
 };
 
-
 module.exports = { registerUsers, loginUsers, getAllUsers, getUserID, updateUser }

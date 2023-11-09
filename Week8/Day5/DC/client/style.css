@@ -1,0 +1,25 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(240, 228, 189);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Rubik';
+}
+
+#submit {
+    color: rgb(3, 6, 6);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Rubik';
+}
+
+#next {
+    color: rgb(3, 6, 6);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Rubik';
+}
