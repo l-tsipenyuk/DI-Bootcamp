@@ -6,7 +6,8 @@ const {
     registerUsers,
     loginUsers,
     getAllUsers,
-    getUserID
+    getUserID,
+    updateUser
 } = require("../controllers/users.controllers.js");
 
 router.post("/register/", registerUsers);
@@ -16,6 +17,8 @@ router.post("/login/", loginUsers);
 router.get("/users/", getAllUsers);
 
 router.get("/users/:id", getUserID);
+
+router.put("/users/:id", updateUser);
 
 
 

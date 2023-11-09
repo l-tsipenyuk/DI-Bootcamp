@@ -61,14 +61,36 @@ async function getAllUsers(req, res) {
 
 const getUserID = async (req, res) => {
     const { id } = req.params;
-    // const { username, password } = req.body;
     try {
         const data = await _getUserID(id);
         res.json(data);
     } catch (err) {
         console.log(err);
-        res.status(404).json({ msg: "This user is not available." });
+        res.status(404).json({ msg: 'This user is not available.' });
     }
 }
 
-module.exports = { registerUsers, loginUsers, getAllUsers, getUserID }
+const updateUser = async (req, res) => {
+    const { id } = req.params;
+    const { username, password } = req.body;
+
+    try {
+        const data = await _getAllUsers();
+
+        if (!data[id]) {
+            return res.status(404).json({ msg: 'User not found' });
+        }
+
+        data[id] = { ...data[id], username, password };
+
+        await _writeAllUsers(data);
+
+        res.json(data[id]);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ msg: 'Server error.' });
+    }
+};
+
+
+module.exports = { registerUsers, loginUsers, getAllUsers, getUserID, updateUser }
