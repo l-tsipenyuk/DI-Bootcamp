@@ -8,20 +8,28 @@ usernameInput.addEventListener("input", updateButtonState);
 passwordInput.addEventListener("input", updateButtonState);
 
 function updateButtonState() {
+    const username = usernameInput.value;
     const password = passwordInput.value;
-    password === "" ? submit.disabled = true : submit.disabled = false;
-}
 
+    submit.disabled = !(username !== "" && password !== "");
+}
 
 submit.addEventListener("click", async (event) => {
     event.preventDefault();
 
+    const username = usernameInput.value;
     const password = passwordInput.value;
-    const username = usernameInput.value
-
 
     try {
-        const response = await fetch(`http://localhost:3000/api/register`, {
+        const usersResponse = await fetch(`http://localhost:3000/api/users`);
+        const existingUsers = await usersResponse.json();
+
+        if (existingUsers.some(user => user.username === username)) {
+            alert("Username already exists.")
+            return;
+        }
+
+        const regResponse = await fetch(`http://localhost:3000/api/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -29,13 +37,14 @@ submit.addEventListener("click", async (event) => {
             body: JSON.stringify({ username, password }),
         });
 
-        if (response.ok) {
-            console.log("User registered.", response);
+        if (regResponse.ok) {
+            console.log("User registered.", regResponse);
+            alert(`${username} is registered, welcome to the website!`)
         } else {
-            console.error("User is not registered.");
+            console.error("User registration failed.");
         }
-    } catch (error) {
-        console.error("An error occurred:", error);
+    } catch (err) {
+        console.error("An error occurred:", err);
     }
 });
 
