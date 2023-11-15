@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    font-size: 15pt;
+}
+
+h1{
+    margin-left: 10px;
+}
+
+.click {
+    border: none;
+    background-color: transparent;
+    color: green;
+    cursor: pointer;
+    font-size: 15pt;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.optionBox {
+    background-color: rgb(235, 235, 158);
+    display: flex;
+    border: 1px solid black;
+    padding: 5px;
+    width: 250px;
+    text-align: center;
+    justify-content: center;
+}
+
