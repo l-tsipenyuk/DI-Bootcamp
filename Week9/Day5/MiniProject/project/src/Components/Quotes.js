@@ -46,7 +46,7 @@ class Quotes extends React.Component {
 
         return (
             <>
-                <div class="container">
+                <div className="container">
                     <h2>"{newQuote.quote}"</h2>
                     <p><i>-{newQuote.author}-</i></p>
                         <button onClick={() => this.getRandomQuote()}>New quote</button>
