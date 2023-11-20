@@ -1,6 +1,6 @@
 const _ = require("lodash");
 const { products } = require("../config/db.js");
-const { _getAllProducts, _getOneProduct, _addProduct, _updateProduct } = require("../models/products.model.js")
+const { _getAllProducts, _getOneProduct, _addProduct, _updateProduct, _searchProduct } = require("../models/products.model.js")
 
 const getAllProducts = async (req, res) => {
   // res.json(products);
@@ -31,16 +31,24 @@ const getOneProduct = async (req, res) => {
   // res.json(product);
 };
 
-const search4Product = (req, res) => {
+const search4Product = async (req, res) => {
   console.log("query=>", req.query);
   const { name } = req.query;
-  const filtered = products.filter((item) => {
-    return item.name.toLowerCase().includes(name.toLowerCase());
-  });
-  console.log(filtered);
-  if (filtered.length === 0)
-    return res.status(404).json({ message: "Not Found" });
-  res.json(filtered);
+  try {
+    const rows = await _searchProduct(name);
+    res.json(rows)
+  } catch (e) {
+    console.log(e);
+    res.status(404).json({ msg: "can't find" })
+  }
+
+  // const filtered = products.filter((item) => {
+  //   return item.name.toLowerCase().includes(name.toLowerCase());
+  // });
+  // console.log(filtered);
+  // if (filtered.length === 0)
+  //   return res.status(404).json({ message: "Not Found" });
+  // res.json(filtered);
 };
 
 const addProduct = async (req, res) => {
@@ -49,7 +57,7 @@ const addProduct = async (req, res) => {
   // console.log("params=>", req.params);
   // const { id } = req.params;
   try {
-    const data = await _addProduct(name,price);
+    const data = await _addProduct(name, price);
     res.json(data)
   } catch (e) {
     console.log(e);
@@ -104,12 +112,12 @@ data {name, price} - body
 
 const updateProduct = async (req, res) => {
   console.log("body=>", req.body);
-  const {id } = req.params;
+  const { id } = req.params;
   const { price } = req.body;
   try {
     const data = await _updateProduct(price);
     res.json(data);
-    getAllProducts(req,res);
+    getAllProducts(req, res);
   } catch (e) {
     console.log(e);
     res.status(404).json({ msg: 'Can not update product.' });
