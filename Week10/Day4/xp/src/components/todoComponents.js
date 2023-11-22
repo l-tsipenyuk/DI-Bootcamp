@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addToDo } from "../actions/todoActions";
+import { addToDo, removeToDo, toggleToDo } from "../actions/todoActions";
+
 
 const AddToDo = (props) => {
     const [todoText, setTodoText] = useState("");
@@ -12,7 +13,13 @@ const AddToDo = (props) => {
         setTodoText("");
     }
 
-    // console.log('todos=>', todos);
+    const handleRemoveToDo = (id) => {
+        dispatch(removeToDo(id));
+    }
+
+    const handleToggleToDo = (id) => {
+        dispatch(toggleToDo(id));
+    }
 
     return (
         <div>
@@ -29,8 +36,15 @@ const AddToDo = (props) => {
                 {todos.map((todo) => (
                     <li key={todo.id}>
                         {todo.text}
+                        <button onClick={() => handleRemoveToDo(todo.id)}>Remove Todo</button>
+                        <label>
+                            <input type="checkbox" checked={todo.completed} onChange={() => handleToggleToDo(todo.id)} />
+                            Completed
+                        </label>
+                        <br></br>
                     </li>)
                 )}
+
             </ul>
         </div>
     );
