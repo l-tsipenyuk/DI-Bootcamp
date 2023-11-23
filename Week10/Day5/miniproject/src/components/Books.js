@@ -42,7 +42,6 @@ const Books = (props) => {
 
     return (
         <>
-
             <h1>Book Cards</h1>
             <div id="searchDiv">
                 <input onChange={(e) => setSearch(e.target.value)} placeholder="Type a book..." />
