@@ -16,7 +16,15 @@ const Cards = (props) => {
         showCards();
     }, []);
 
-    
+    const shuffleCards = () => {
+        const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
+        setCards(shuffledCards);
+    };
+
+    const handleShuffle = () => {
+        shuffleCards();
+    }
+
 
     return (
         <>
@@ -25,15 +33,15 @@ const Cards = (props) => {
                 <h4>Score: Top Score:</h4>
             </div>
             <h3>Get points by clicking on an image but don't click on them more than once!</h3>
-            <div className="container" onClick={""}>
+            <div className="container" onClick={handleShuffle}>
                 {cards.map((item) => (
                     <div className="heroCard" key={item.id}>
-                        <img src={item.image} alt="Not found" />
+                        < img src={item.image} alt="Not found" />
                         <h5>{item.name}</h5>
                         <h5>{item.occupation}</h5>
                     </div>
                 ))}
-            </div>
+            </div >
         </>
     );
 };
