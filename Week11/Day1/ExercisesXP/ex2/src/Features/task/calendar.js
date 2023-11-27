@@ -6,7 +6,7 @@ const TaskCalendar = ({ onSelectDay }) => {
 
     const handleDay = (day) => {
         setSelectedDay(day);
-        onSelectDay(day);
+        onSelectDay(day.toISOString());
     };
 
     return (

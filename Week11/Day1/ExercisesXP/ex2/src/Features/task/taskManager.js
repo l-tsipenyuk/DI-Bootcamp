@@ -12,7 +12,7 @@ const TaskManager = () => {
     return(
         <div>
             <TaskCalendar onSelectDay={handleDaySelect}/>
-            {selectedDay && <TaskList selectDay={selectedDay}/>}
+            <TaskList selectedDay={selectedDay}/>
         </div>
     );
 };
