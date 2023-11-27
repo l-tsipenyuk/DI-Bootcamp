@@ -2,23 +2,32 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { tasksState } from '../task/taskSlice';
 
-const TaskList = ({ selectDay }) => {
+const TaskList = ({ selectedDay }) => {
     const tasks = useSelector(tasksState);
 
-    if (selectDay === undefined){
-        return <div>Nothing selected.</div>
-    }
+    console.log("tasks:", tasks);
+    console.log("selectedDay:", selectedDay);
 
-    const tasksSelectDay = tasks[selectDay] || [];
+    // if (!selectDay){
+    //     return <div>Nothing selected.</div>
+    // }
+
+    const tasksForSelectedDay = tasks[selectedDay]?.tasks || [];
+
+    console.log("tasksForSelectedDay:", tasksForSelectedDay);
 
     return (
         <div>
-            <h3>Tasks for {selectDay}</h3>
+            <h3>Tasks for {selectedDay}</h3>
+            {tasksForSelectedDay.length>0? (
             <ul>
-                {tasksSelectDay.map((task) => (
+                    {tasksForSelectedDay.map((task) => (
                     <li key={task.id}>{task.description}</li>
                 ))}
             </ul>
+            ):(
+                <p>No tasks for {selectedDay}</p>
+            )}
         </div>
     );
 };

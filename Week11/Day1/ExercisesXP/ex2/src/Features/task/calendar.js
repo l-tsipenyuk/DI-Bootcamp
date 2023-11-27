@@ -17,6 +17,6 @@ const TaskCalendar = ({ onSelectDay }) => {
             </div>
         </>
     );
-}
+};
 
 export default TaskCalendar;

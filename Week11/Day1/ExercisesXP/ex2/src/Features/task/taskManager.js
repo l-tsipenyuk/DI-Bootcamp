@@ -3,18 +3,20 @@ import TaskCalendar from './calendar';
 import TaskList from './taskList';
 
 const TaskManager = () => {
-    const [selectDay, setSelectDay] = useState(null);
+    const [selectedDay, setSelectedDay] = useState(null);
 
     const handleDaySelect = (day) => {
-        setSelectDay(day);
+        setSelectedDay(day);
     };
 
     return(
         <div>
             <TaskCalendar onSelectDay={handleDaySelect}/>
-            {selectDay && <TaskList selectDay={selectDay}/>}
+            {selectedDay && <TaskList selectDay={selectedDay}/>}
         </div>
     );
 };
 
 export default TaskManager;
+
+
