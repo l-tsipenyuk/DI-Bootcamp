@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
 
 const TaskCalendar = ({ onSelectDay }) => {
     const [selectedDay, setSelectedDay] = useState(null);
@@ -10,12 +12,13 @@ const TaskCalendar = ({ onSelectDay }) => {
     };
 
     return (
-        <>
-            <h1 className="header">Calendar</h1>
+        <div className="calendar">
+            <h1 className="header">Planner Application</h1>
             <div className="calendar-container">
-                <Calendar onChange={handleDay} value={selectedDay} />
+                <Calendar onChange={handleDay} value={selectedDay}/>
             </div>
-        </>
+            
+        </div>
     );
 };
 
