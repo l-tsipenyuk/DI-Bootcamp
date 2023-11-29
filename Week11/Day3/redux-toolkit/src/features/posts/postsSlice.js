@@ -1,4 +1,4 @@
-import { createSlice, nanoid, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, nanoid, createAsyncThunk, createSelector } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // const posts = [
@@ -125,6 +125,19 @@ const postsSlice = createSlice({
       });
   },
 });
+
+// new
+export const selectPosts = (state) => state.posts.posts;
+export const selectStatus = (state) => state.posts.status;
+
+// export const selectPostsSelector = createSelector(selectPosts, (posts) => {
+//   return posts
+// });
+
+// export const postsStatusSelector = createSelector(selectStatus, (status) => {
+//   return status
+// });
+
 
 export const { getposts, addreaction, addpost } = postsSlice.actions;
 

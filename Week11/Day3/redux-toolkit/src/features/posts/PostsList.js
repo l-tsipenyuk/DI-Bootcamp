@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getposts, fetchPosts } from "./postsSlice";
+import { getposts, fetchPosts, selectStatus } from "./postsSlice";
 import ReactionButton from "./ReactionButton";
 import AddPostForm from "./AddPostForm";
 import Users from "../users/Users";
@@ -8,13 +8,31 @@ import Users from "../users/Users";
 
 // const POST_URL = "https://jsonplaceholder.typicode.com/posts";
 
+import {selectPostsSelector, postsStatusSelector} from './postsSelector';
+
+import { useSelectPostsSelector, usePostsStatusSelector, useFetchPosts } from "./postsHooks";
+
 const PostsList = (props) => {
-  const posts = useSelector((state) => state.posts.posts);
-  const postStatus = useSelector((state) => state.posts.status);
+  // const posts = useSelector((state) => state.posts.posts);
+  // const postStatus = useSelector((state) => state.posts.status);
+
+  // better option!
+  // const posts = useSelector(selectPostsSelector);
+  // const postStatus = useSelector(selectStatus);
+
+  // even better option - with custom hook
+  const posts = useSelectPostsSelector();
+  const postStatus = usePostsStatusSelector();
+
   const dispatch = useDispatch();
 
+  const callFetchPost = useFetchPosts();
+
   useEffect(() => {
-    dispatch(fetchPosts());
+    // dispatch(fetchPosts());
+
+    // better option - with custom hook!
+    callFetchPost();
   }, []);
 
   // const fetchposts = async () => {
